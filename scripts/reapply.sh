@@ -80,6 +80,11 @@ fi
 UPSTREAM_SHA="$(git -C "$WORKDIR" rev-parse HEAD)"
 log "Upstream HEAD ($UPSTREAM_BRANCH): $UPSTREAM_SHA"
 
+# Drop upstream's CI: it's irrelevant to a Jeedom plugin install, and the
+# Actions GITHUB_TOKEN is forbidden from pushing .github/workflows/* files
+# (would need a PAT with 'workflow' scope). Removing it lets us publish freely.
+rm -rf "$WORKDIR/.github"
+
 # --- Apply the patch series, deciding clean vs conflict ----------------------
 shopt -s nullglob
 patches=( $PATCH_GLOB )

@@ -109,8 +109,12 @@ jobs:
           set -euo pipefail
           short="$(echo "${{ steps.apply.outputs.upstream_sha }}" | cut -c1-7)"
           cd ".work/$TRACK"
+          # Publish as a single orphan commit: no upstream history (so no commit in
+          # the push touches workflow files, which the GITHUB_TOKEN may not do) and
+          # a clean install branch. reapply.sh already stripped .github/.
+          git checkout -q --orphan _dist
           git add -A
-          git commit -q -m "Enable distant mode (upstream ${short}, track $TRACK)" || echo "nothing to commit"
+          git commit -q -m "Z-Wave JS plugin with distant mode enabled (upstream ${short}, track $TRACK)"
           url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
           git push --force "$url" "HEAD:refs/heads/dist/$TRACK"
           git tag -f "dist-$TRACK-$short"
@@ -127,30 +131,31 @@ jobs:
             sleep $((i * 3))
           done
 
-      # ---- CONFLICT: push branch + open labelled PR, do NOT publish ----
-      - name: Open conflict PR
+      # ---- CONFLICT: push the conflicted tree as a branch + open an issue ----
+      - name: Open conflict issue
         if: steps.filter.outputs.skip != 'true' && steps.check.outputs.needed == 'true' && steps.apply.outputs.result == 'conflict'
         run: |
           set -euo pipefail
           short="$(echo "${{ steps.apply.outputs.upstream_sha }}" | cut -c1-7)"
           branch="reapply/$TRACK/${short}-${{ github.run_id }}"
           cd ".work/$TRACK"
+          # Orphan commit (same token restriction); preserves the conflict markers
+          # in the tree so a human can inspect/resolve them on this branch.
+          git checkout -q --orphan _conflict
           git add -A
-          git commit -q -m "WIP: distant-mode patch needs manual merge (upstream ${short})" || true
+          git commit -q -m "Conflict: distant-mode patch needs manual merge (upstream ${short})"
           url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
           git push --force "$url" "HEAD:refs/heads/$branch"
           cd "$GITHUB_WORKSPACE"
-          # ensure labels exist (ignore errors if they already do)
           gh label create "merge-conflict" --color B60205 --description "Upstream re-apply needs manual merge" 2>/dev/null || true
           gh label create "track:$TRACK" --color 0E8A16 2>/dev/null || true
-          gh pr create \
-            --base "dist/$TRACK" \
-            --head "$branch" \
+          gh issue create \
             --title "Re-apply conflict on $TRACK (upstream ${short})" \
             --label "merge-conflict" --label "track:$TRACK" \
             --body "The distant-mode patch did not apply cleanly to upstream \`$UPSTREAM_BRANCH\` @ \`${short}\`.
 
-          Failed patch(es): \`${{ steps.apply.outputs.failed_patches }}\`
+          **Failed patch(es):** \`${{ steps.apply.outputs.failed_patches }}\`
+          **Conflicted tree (with markers):** branch [\`$branch\`](../../tree/$branch)
 
-          Resolve the conflict markers in this branch, then merge into \`dist/$TRACK\`. After merging, update \`.last-applied-$TRACK.sha\` on the default branch (or re-run the workflow once the patch is fixed) so the next run sees this upstream commit as applied." \
-            || echo "PR may already exist for $branch"
+          To fix: inspect the conflict markers on that branch, decide the correct \`plugin_info/configuration.php\`, regenerate \`patches/0001-enable-distant-mode-ui.patch\` from the resolved file, and commit it to the default branch. The next run will then apply cleanly and publish \`dist/$TRACK\`." \
+            || echo "issue creation failed (may already exist)"
