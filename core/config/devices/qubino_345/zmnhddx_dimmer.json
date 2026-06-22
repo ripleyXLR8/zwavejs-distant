@@ -1,0 +1,27 @@
+{
+    "name": "ZMNHDDx Dimmer",
+    "type": "Micromodule",
+    "comlink": "3063-qubino-micromodule-variateur-et-consometre-z-wave-zmnhdd1-3830062070096",
+    "remark": "",
+    "imglink": "qubino.zmnhddx",
+    "versions": {
+        "1": [
+            "81"
+        ]
+    },
+    "modes": {
+        "multilevel": "Variateur",
+        "switch": "Switch"
+    },
+    "properties": {
+        "Multilevel": {
+            "mode": "multilevel"
+        },
+        "Switch": {
+            "mode": "switch"
+        },
+        "Temperature": {},
+        "Power": {},
+        "Energy": {}
+    }
+}

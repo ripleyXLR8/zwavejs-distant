@@ -1,0 +1,55 @@
+{
+    "name": "MultiSensor Gen5 (ZW074)",
+    "type": "Multicapteurs",
+    "comlink": "2681-aeon-labs-detecteur-multifonction-multisensor-z-wave-plus-gen5-1220000012684",
+    "remark": "Attention ce module peut remonter de mauvaises données, il faut bien faire attention à la configuration",
+    "imglink": "aeotec.multisensor-gen5",
+    "configuration": {
+        "battery_type": "4x1.5V AAA"
+    },
+    "versions": {
+        "2": [
+            "74"
+        ]
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-4",
+                "value": "1"
+            },
+            {
+                "path": "112-0-5",
+                "value": "2"
+            },
+            {
+                "path": "112-0-101-1",
+                "value": "1"
+            },
+            {
+                "path": "112-0-101-32",
+                "value": "1"
+            },
+            {
+                "path": "112-0-101-64",
+                "value": "1"
+            },
+            {
+                "path": "112-0-101-128",
+                "value": "1"
+            },
+            {
+                "path": "112-0-111",
+                "value": "3600"
+            }
+        ],
+        "needswakeup": true
+    },
+    "properties": {
+        "Motion": {"type": "binary-any"},
+        "Temperature": {},
+        "Luminance": {},
+        "Humidity": {},
+        "Battery": {}
+    }
+}

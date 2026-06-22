@@ -1,0 +1,18 @@
+{
+    "name": "Micro Smart Energy Switch (DSC12103)",
+    "type": "Micromodule",
+    "comlink": "286-aeon-labs-micromodule-commutateur-et-compteur-d-energie-g2-1220000011014",
+    "remark": "",
+    "imglink": "aeotec.insert-switch",
+    "versions": {
+        "3": [
+            "12"
+        ]
+    },
+    "properties": {
+        "Multilevel": {},
+        "Power": {},
+        "Energy": {},
+        "Scene": {}
+    }
+}

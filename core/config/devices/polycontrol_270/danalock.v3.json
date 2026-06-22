@@ -1,0 +1,45 @@
+{
+    "name": "Danalock V3 BTZE",
+    "type": "Serrure",
+    "comlink": "4197-danalock-serrure-connectee-bluetooth-et-z-wave-danalock-v3-5712560000462",
+    "remark": "Inclusion en mode sécurisé",
+    "imglink": "polycontrol.danalock",
+    "configuration": {
+        "battery_type": "4x3V CR123A"
+    },
+    "versions": {
+        "9": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Door Lock": {},
+        "Set Code": {
+            "multi": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+            ],
+            "replace": {
+                "#code#": "multiKey"
+            }
+        }
+    }
+}

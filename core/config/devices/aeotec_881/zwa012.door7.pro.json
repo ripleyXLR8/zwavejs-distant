@@ -1,0 +1,29 @@
+{
+    "name": "Door/Window Sensor 7 Pro (ZWA012)",
+    "type": "Ouverture",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.zwa012",
+    "configuration": {
+        "battery_type": "1x3V ER14250"
+    },
+    "versions": {
+        "2": [
+            "12"
+        ]
+    },
+    "properties": {
+        "Opening": {"type":"notification-simple"},
+        "Tilt": {"type":"notification-door"},
+        "Tamper": {},
+        "CentralScene": {
+            "multi": [
+                1
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}

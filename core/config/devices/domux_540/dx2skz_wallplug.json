@@ -1,0 +1,22 @@
+{
+    "name": "Smart Plug (DX2SK-Z)",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "domux.dx2skz",
+    "versions": {
+        "32776": [
+            "4096"
+        ],
+        "32774": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {}
+    }
+}

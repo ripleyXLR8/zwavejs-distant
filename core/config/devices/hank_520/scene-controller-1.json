@@ -1,0 +1,29 @@
+{
+    "name": "Scene Controller 1",
+    "type": "Contrôleur portable",
+    "comlink": "",
+    "remark": "",
+    "imglink": "520.513.9_scene-controller-1",
+    "configuration": {
+        "battery_type": "1xLIR2450"
+    },
+    "versions": {
+        "513": [
+            "9"
+        ],
+        "512": [
+            "9"
+        ]
+    },
+    "properties": {
+        "CentralScene": {
+            "multi": [
+                1
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}

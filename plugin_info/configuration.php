@@ -1,0 +1,264 @@
+<?php
+/* This file is part of Plugin openzwave for jeedom.
+*
+* Plugin openzwave for jeedom is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* Plugin openzwave for jeedom is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with Plugin openzwave for jeedom. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
+include_file('core', 'authentification', 'php');
+if (!isConnect('admin')) {
+	throw new Exception('{{401 - Accès non autorisé}}');
+}
+?>
+<form class="form-horizontal">
+	<fieldset>
+		<div class="col-lg-6">
+			<?php if (class_exists('jMQTT')) {
+				echo '<div class="alert alert-warning">{{Le plugin jMQTT est installé, veuillez vérifier la configuration du broker dans le plugin jMQTT et la reporter, si nécessaire, dans le plugin MQTT Manager.}}</div>';
+			}
+			?>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{ZwaveJs UI}}</label>
+				<div class="col-md-3">
+					<a class="btn btn-danger controller_action" target="_blank" href="http://<?php echo network::getNetworkAccess('internal', 'ip') ?>:8091" title="Aucun support ne sera fait en cas de changement d'un réglage du menu configuration de ZwaveJS UI. Vous pouvez changez le mot de passe utilisateur si vous le souhaitez. Vous pouvez utiliser les fonctionnalités. Mais ne changez aucun réglage. Les identifiants par défaut sont : admin/zwave"><i class="fas fa-external-link-square-alt "></i> {{Interface ZwaveJs UI}}</a></td>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Mode}}</label>
+				<div class="col-md-3">
+					<select class="configKey form-control" data-l1key="zwavejs::mode" id="sel_zwavejsMode">
+					<option value="distant">{{Distant}}</option>
+					<option value="local">{{Local}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group zwavejs_mode local">
+				<label class="col-md-4 control-label">{{Port du contrôleur Z-Wave}}
+					<sup><i class="fas fa-question-circle tooltips" title="{{Renseigner le port utilisé par le contrôleur Z-Wave}}"></i></sup>
+				</label>
+				<div class="col-md-7">
+					<select class="configKey form-control" data-l1key="port">
+						<option value="none">{{Aucun}}</option>
+						<option value="tcp">{{Passerelle TCP distante}}</option>
+						<?php
+						foreach (jeedom::getUsbMapping('', true) as $name => $value) {
+							echo '<option value="' . $name . '">' . $name . ' (' . $value . ')</option>';
+						}
+						foreach (ls('/dev/', 'tty*') as $value) {
+							echo '<option value="/dev/' . $value . '">/dev/' . $value . '</option>';
+						}
+						?>
+						<option value="/dev/serial/by-id/usb-0658_0200-if00">{{Utile pour certains Raspberry (/dev/serial/by-id/usb-0658_0200-if00)}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group zwavejs_port tcp" style="display:none;">
+				<label class="col-md-4 control-label">{{Passerelle TCP distante}} <sub>(IP:PORT)</sub>
+					<sup><i class="fas fa-question-circle tooltips" title="{{Renseignez l'adresse de la passerelle distante}}"></i></sup>
+				</label>
+				<div class="col-md-3">
+					<input class="configKey form-control" data-l1key="tcp_ip_port" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Préfixe MQTT}}
+					<sup><i class="fas fa-question-circle tooltips" title="{{Préfixe à utiliser dans MQTT}}"></i></sup>
+				</label>
+				<div class="col-md-7">
+					<input type="text" class="configKey form-control" data-l1key="prefix" placeholder="{{}}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Appliquer la configuration recommandée}}
+					<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour appliquer le jeu de configuration spécialement recommandé par l'équipe Jeedom lors de l'inclusion d'un nouveau module}}"></i></sup>
+				</label>
+				<div class="col-md-1">
+					<input type="checkbox" class="configKey" data-l1key="auto_applyRecommended" checked>
+				</div>
+				<label class="col-md-4 control-label">{{Suppression des périphériques exclus}}
+					<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour supprimer automatiquement les équipements Jeedom correspondant à des périphériques exclus du contrôleur}}"></i></sup>
+				</label>
+				<div class="col-md-1">
+					<input type="checkbox" class="configKey" data-l1key="autoRemoveExcludeDevice">
+				</div>
+			</div>
+			<br>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Alertes de noeuds morts}}
+					<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour être notifié dans le centre de messages Jeedom des noeuds morts et du retour à l'état Alive}}"></i></sup>
+				</label>
+				<div class="col-md-1">
+					<input type="checkbox" class="configKey" data-l1key="notifyDead" checked>
+				</div>
+				<label class="col-md-4 control-label">{{Alertes de réveils manqués}}
+					<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour être notifié dans le centre de messages Jeedom des réveils manqués et du retour à la normale}}"></i></sup>
+				</label>
+				<div class="col-md-1">
+					<input type="checkbox" class="configKey" data-l1key="notifyMissWakeup" checked>
+				</div>
+			</div>
+			<div class="form-group zwavejs_mode local">
+				<label class="col-md-4 control-label">{{Soft Reset}}
+					<sup><i class="fas fa-question-circle tooltips" title="{{Ne pas toucher si vous ne savez pas ce qu'est cette option}}"></i></sup>
+				</label>
+				<div class="col-md-1">
+					<input type="checkbox" class="configKey" data-l1key="softReset" checked>
+				</div>
+			</div>
+			<div class="form-group zwavejs_mode local">
+				<label class="col-md-4 control-label">{{Version ZwaveJS UI}}
+					<sup><i class="fas fa-question-circle tooltips" title="{{Version de la librairie ZwaveJS UI}}"></i></sup>
+				</label>
+				<div class="col-md-7">
+					<?php
+					$file = dirname(__FILE__) . '/../resources/zwave-js-ui/package.json';
+					$package = array();
+					if (file_exists($file)) {
+						$package = json_decode(file_get_contents($file), true);
+					}
+					if (isset($package['version'])) {
+						config::save('zwavejsVersion', $package['version'], 'zwavejs');
+					}
+					$localVersion = config::byKey('zwavejsVersion', 'zwavejs', 'N/A');
+					$wantedVersion = config::byKey('wantedVersion', 'zwavejs', '');
+					if ($localVersion != $wantedVersion) {
+						echo '<span class="label label-warning">' . $localVersion . '</span><br>';
+						echo "<div class='alert alert-danger text-center'>{{Votre version de ZwaveJS UI n'est pas celle recommandée par le plugin. Vous utilisez actuellement la version }}<code>" . $localVersion . '</code>. {{ Le plugin nécessite la version }}<code>' . $wantedVersion . '</code>. {{Veuillez relancer les dépendances pour mettre à jour la librairie. Relancez ensuite le démon pour voir la nouvelle version.}}</div>';
+					} else {
+						echo '<span class="label label-success">' . $localVersion . '</span><br>';
+					}
+					?>
+				</div>
+			</div>
+
+			<br>
+		</div>
+
+		<div class="col-lg-6 zwavejs_mode local">
+			<div class="alert alert-info text-center">{{Les clés de sécurités sont à conserver précieusement. Si vous perdez vos clés les périphériques inclus en sécurisés devront être réappairés. Les clés peuvent être spécifiées, si les champs sont vides ou invalides le plugin en générera et vous pourrez les voir ensuite.}}
+				<br>{{Si votre contrôleur a été utilisé avec le plugin Openzwave et que vous aviez inclus des modules en sécurisés la clé S0 est}} :
+				<code>0102030405060708090A0B0C0D0E0F10</code>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Clé de Sécurité S0}}</label>
+				<div class="input-group col-md-7">
+					<input class="configKey roundedLeft form-control" data-l1key="s0key" placeholder="{{Clé de sécurité S0}}">
+					<span class="input-group-btn">
+						<a class="btn btn-default form-control randomKey roundedRight" data-key="s0key"><i class="fas fa-sync-alt"></i></a>
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Clé de Sécurité S2 Authenticated}}</label>
+				<div class="input-group col-md-7">
+					<input class="configKey roundedLeft form-control" data-l1key="s2key_auth" placeholder="{{Clé de sécurité S2 Authenticated}}">
+					<span class="input-group-btn">
+						<a class="btn btn-default form-control randomKey roundedRight" data-key="s2key_auth"><i class="fas fa-sync-alt"></i></a>
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Clé de Sécurité S2 Access Control}}</label>
+				<div class="input-group col-md-7">
+					<input class="configKey roundedLeft form-control" data-l1key="s2key_access" placeholder="{{Clé de sécurité S2 Access Control}}">
+					<span class="input-group-btn">
+						<a class="btn btn-default form-control randomKey roundedRight" data-key="s2key_access"><i class="fas fa-sync-alt"></i></a>
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Clé de Sécurité S2 Unauthenticated}}</label>
+				<div class="input-group col-md-7">
+					<input class="configKey roundedLeft form-control" data-l1key="s2key_unauth" placeholder="{{Clé de sécurité S2 Unauthenticated}}">
+					<span class="input-group-btn">
+						<a class="btn btn-default form-control randomKey roundedRight" data-key="s2key_unauth"><i class="fas fa-sync-alt"></i></a>
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Clé de Sécurité S2 Authenticated Long Range}}</label>
+				<div class="input-group col-md-7">
+					<input class="configKey roundedLeft form-control" data-l1key="s2key_auth_long" placeholder="{{Clé de sécurité S2 Authenticated Long Range}}">
+					<span class="input-group-btn">
+						<a class="btn btn-default form-control randomKey roundedRight" data-key="s2key_auth_long"><i class="fas fa-sync-alt"></i></a>
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">{{Clé de Sécurité S2 Access Control Long Range}}</label>
+				<div class="input-group col-md-7">
+					<input class="configKey roundedLeft form-control" data-l1key="s2key_access_long" placeholder="{{Clé de Sécurité S2 Access Control Long Range}}">
+					<span class="input-group-btn">
+						<a class="btn btn-default form-control randomKey roundedRight" data-key="s2key_access_long"><i class="fas fa-sync-alt"></i></a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</form>
+
+<script>
+	$('.configKey[data-l1key="port"]').off('change').on('change', function() {
+		$('.zwavejs_port').hide();
+		if ($(this).value() == 'tcp') {
+			$('.zwavejs_port.' + $(this).value()).show();
+		}
+	})
+
+	$('#sel_zwavejsMode').off('change').on('change', function() {
+		$('.zwavejs_mode').hide();
+		if ($(this).value() != '') {
+			$('.zwavejs_mode.' + $(this).value()).show();
+		}
+	})
+
+	$('.randomKey').off('click').on('click', function() {
+		var el = $(this)
+		bootbox.confirm('{{Êtes-vous sûr de vouloir réinitialiser la clé}}' + ' ' + el.attr('data-key') + ' ? {{La prise en compte sera effective après sauvegarde et relance du démon.}}', function(result) {
+			if (result) {
+				$.ajax({
+					type: "POST",
+					url: "plugins/zwavejs/core/ajax/zwavejs.ajax.php",
+					data: {
+						action: "generateRandomKey"
+					},
+					dataType: 'json',
+					error: function(request, status, error) {
+						handleAjaxError(request, status, error)
+					},
+					success: function(data) {
+						el.closest('.input-group').find('.configKey').value(data.result)
+					}
+				})
+			}
+		})
+	})
+
+	$('body').off('zwavejs::dependancy_end').on('zwavejs::dependancy_end', function(_event, _options) {
+		window.location.reload()
+	})
+
+	// Reflect the saved mode on page load: Jeedom injects configKey values after this
+	// inline script runs, so poll briefly until the value is set, then drive the toggle.
+	var _zwavejsModeTries = 0;
+	function _initZwavejsMode() {
+		var v = $('#sel_zwavejsMode').value();
+		if (v !== '' && v != null) {
+			$('#sel_zwavejsMode').trigger('change');
+		} else if (_zwavejsModeTries++ < 20) {
+			setTimeout(_initZwavejsMode, 200);
+		}
+	}
+	_initZwavejsMode();
+</script>

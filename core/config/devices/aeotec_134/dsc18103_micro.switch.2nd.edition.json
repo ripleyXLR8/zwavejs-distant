@@ -1,0 +1,17 @@
+{
+    "name": "Micro Smart Switch 2nd Edition (DSC18103)",
+    "type": "Micromodule",
+    "comlink": "286-aeon-labs-micromodule-commutateur-et-compteur-d-energie-g2-1220000011014",
+    "remark": "",
+    "imglink": "aeotec.insert-switch",
+    "versions": {
+        "3": [
+            "18"
+        ]
+    },
+    "properties": {
+        "Switch": {},
+        "Power": {},
+        "Energy": {}
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "FGWPE/FGWPF Wall Plug",
+    "type": "Prise",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/fibaro.fgwpe101_-_Wall_Plug",
+    "comlink": "2934-fibaro-module-prise-commutateur-z-wave-avec-mesure-d-energie-fgwpf-102-schuko-5902020528302",
+    "remark": "",
+    "imglink": "fibaro.fgwpe101",
+    "versions": {
+        "1536": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {
+            "type": "multilevel"
+        }
+    }
+}
