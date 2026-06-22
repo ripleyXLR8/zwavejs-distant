@@ -17,10 +17,18 @@ thing missing in the official release is the UI switch to turn it on — the mod
 selector in `plugin_info/configuration.php` ships commented out, and the docs
 mark remote mode as "roadmap, not yet released".
 
-This fork is therefore tiny: **one patch** that un-comments that selector (plus a
-small load-time toggle init). No embedded MQTT daemon, no Docker config export,
-none of the heavy machinery of the older `lxrootard/zwavejs` fork — your existing
-`mqtt2` does the transport.
+This fork is therefore small — two patches, no embedded MQTT daemon, no Docker
+config export, none of the heavy machinery of the older `lxrootard/zwavejs` fork
+(your existing `mqtt2` does the transport):
+
+- **`0001-enable-distant-mode-ui.patch`** — un-comments the mode selector in
+  `plugin_info/configuration.php` (plus a small load-time toggle init).
+- **`0002-distant-mode-subscribe.patch`** — fixes a real gap in upstream's
+  unreleased distant code: `deamon_start()` returned immediately in distant mode,
+  **before** the `mqtt2::addPluginTopic()` subscription, so the plugin subscribed
+  to nothing and received no data from the remote antenna. The patch makes the
+  distant branch verify `mqtt2` is up, subscribe to the broker, and pull the
+  current state (`getInfo()` + `getNodes('sync')`).
 
 > When Jeedom officially ships Distant mode, this patch becomes a no-op and the
 > fork can be retired.

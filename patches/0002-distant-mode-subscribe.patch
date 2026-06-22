@@ -1,0 +1,24 @@
+diff --git a/core/class/zwavejs.class.php b/core/class/zwavejs.class.php
+index 3a3046f..d8c29d3 100644
+--- a/core/class/zwavejs.class.php
++++ b/core/class/zwavejs.class.php
+@@ -362,7 +362,18 @@ class zwavejs extends eqLogic {
+ 
+ 	public static function deamon_start($_debug = false) {
+ 		if (config::byKey('zwavejs::mode', 'zwavejs') == 'distant') {
+-			return;
++			// Distant mode: no local zwave-js-ui to launch, but we still MUST
++			// subscribe to the broker (otherwise the plugin receives nothing) and
++			// pull the current state from the remote antenna.
++			if (!class_exists('mqtt2') || mqtt2::deamon_info()['state'] != 'ok') {
++				throw new Exception(__('Le démon MQTT Manager n\'est pas démarré', __FILE__));
++			}
++			mqtt2::addPluginTopic(__CLASS__, config::byKey('prefix', __CLASS__, 'zwave'));
++			config::save('lastStart', time(), __CLASS__);
++			message::removeAll(__CLASS__, 'unableStartDeamon');
++			self::getInfo();
++			self::getNodes('sync');
++			return true;
+ 		}
+ 		// log::add(__CLASS__, 'debug', '[' . __FUNCTION__ . '] ' . 'Inscription au plugin mqtt2');
+ 		config::save('controllerStatus', 'none', __CLASS__);
