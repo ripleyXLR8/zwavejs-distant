@@ -73,15 +73,19 @@ jobs:
             echo "needed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          state_file=".last-applied-$TRACK.sha"
-          last="$(cat "$state_file" 2>/dev/null || echo none)"
-          echo "Upstream=$remote_sha  LastApplied=$last"
-          if [ "$remote_sha" = "$last" ]; then
+          # Token tracks BOTH upstream HEAD and our patch contents, so editing a
+          # patch (with upstream unchanged) still triggers a rebuild.
+          patches_hash="$(cat patches/*.patch | sha1sum | cut -d' ' -f1)"
+          token="${remote_sha}-${patches_hash}"
+          last="$(cat ".last-applied-$TRACK.sha" 2>/dev/null || echo none)"
+          echo "Token=$token  LastApplied=$last"
+          if [ "$token" = "$last" ]; then
             echo "needed=false" >> "$GITHUB_OUTPUT"
           else
             echo "needed=true" >> "$GITHUB_OUTPUT"
           fi
           echo "upstream_sha=$remote_sha" >> "$GITHUB_OUTPUT"
+          echo "token=$token" >> "$GITHUB_OUTPUT"
 
       - name: Re-apply patch series
         if: steps.filter.outputs.skip != 'true' && steps.check.outputs.needed == 'true'
@@ -120,7 +124,7 @@ jobs:
           git tag -f "dist-$TRACK-$short"
           git push --force "$url" "refs/tags/dist-$TRACK-$short"
           cd "$GITHUB_WORKSPACE"
-          echo "${{ steps.apply.outputs.upstream_sha }}" > ".last-applied-$TRACK.sha"
+          echo "${{ steps.check.outputs.token }}" > ".last-applied-$TRACK.sha"
           git add ".last-applied-$TRACK.sha"
           git commit -q -m "ci: $TRACK published at upstream ${short}" || { echo "state unchanged"; exit 0; }
           # Both matrix tracks may push state to the default branch at once; rebase+retry.
