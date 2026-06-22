@@ -1,0 +1,29 @@
+{
+    "name": "Water Sensor 6 (ZW122)",
+    "type": "Fuite",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.dsb122",
+    "configuration": {
+        "battery_type": "1x3.0V CR123A"
+    },
+    "versions": {
+        "258": [
+            "122"
+        ],
+        "2": [
+            "122"
+        ]
+    },
+    "properties": {
+        "Flood|1": {
+            "replace": {"#endpoint#": 1}
+        },
+        "Flood|2": {
+            "replace": {"#endpoint#": 2}
+        },
+        "Temperature": {},
+        "Tamper": {},
+        "Battery": {}
+    }
+}

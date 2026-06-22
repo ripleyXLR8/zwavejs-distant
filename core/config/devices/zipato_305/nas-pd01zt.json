@@ -1,0 +1,22 @@
+{
+    "name": "PIR Sensor",
+    "type": "Multicapteurs",
+    "comlink": "",
+    "remark": "",
+    "configuration": {
+        "battery_type": "1x3V CR123A"
+    },
+    "versions": {
+        "3": [
+            "4233",
+            "1089"
+        ]
+    },
+    "properties": {
+        "Motion": {},
+        "Temperature": {},
+        "Luminance": {},
+        "Tamper": {},
+        "Battery": {}
+    }
+}

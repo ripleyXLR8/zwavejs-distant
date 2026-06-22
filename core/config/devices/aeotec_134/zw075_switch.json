@@ -1,0 +1,25 @@
+{
+    "name": "Smart Switch Gen5 (ZW075)",
+    "type": "Prise",
+    "comlink": "2594-aeon-labs-module-prise-commutateur-z-wave-plus-avec-mesure-d-energie-gen5-1220000012578",
+    "remark": "",
+    "imglink": "aeotec.zw075",
+    "versions": {
+        "259": [
+            "75"
+        ],
+        "3": [
+            "75"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {},
+        "Voltage": {},
+        "Current": {},
+        "Scene": {}
+    }
+}

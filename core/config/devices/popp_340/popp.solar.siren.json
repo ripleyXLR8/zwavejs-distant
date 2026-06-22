@@ -1,0 +1,91 @@
+{
+    "name": "Solar Powered Outdoor Siren",
+    "type": "Sirène",
+    "comlink": "3180-popp-sirene-exterieure-solaire-z-wave-0019962005107",
+    "remark": "",
+    "imglink": "popp.solar-siren",
+    "configuration": {
+        "battery_type": "Batterie"
+    },
+    "versions": {
+        "4": [
+            "2"
+        ]
+    },
+    "properties": {
+        "Switch": {"type":"alert"},
+        "Temperature": {},
+        "Tamper": {},
+        "Battery": {}
+    },
+    "commands": [
+        {
+            "name": "Flash",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": 0,
+                "property": "5",
+                "value": "set-1"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Sirène",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": 0,
+                "property": "5",
+                "value": "set-0"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Flash + Sirène",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": 0,
+                "property": "5",
+                "value": "set-2"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Mode",
+            "type": "info",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": 0,
+                "property": "5"
+            },
+            "subtype": "string",
+            "display": {
+                "generic_type": "DONT"
+            },
+            "template": {
+                "dashboard": "tile",
+                "mobile": "tile"
+            },
+            "unite": ""
+        }
+    ]
+}

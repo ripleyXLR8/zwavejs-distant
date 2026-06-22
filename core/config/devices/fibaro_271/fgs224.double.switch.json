@@ -1,0 +1,27 @@
+{
+    "name": "FGS-224 Double charge",
+    "type": "Micromodule",
+    "comlink": "",
+    "remark": "",
+    "imglink": "fibaro.fgs224",
+    "versions": {
+        "516": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Switch": {"multi": [
+                1,
+                2
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "CentralScene": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        }
+    }
+}

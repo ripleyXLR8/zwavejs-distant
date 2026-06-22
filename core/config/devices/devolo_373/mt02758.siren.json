@@ -1,0 +1,122 @@
+{
+    "name": "Siren MT02758",
+    "type": "Sirène",
+    "comlink": "",
+    "remark": "",
+    "imglink": "devolo.mt02758",
+    "versions": {
+        "4": [
+            "10"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "nolink",
+            "dashboard": "timeAlert",
+            "mobile": "timeAlert",
+            "generic_type": "DONT"
+        },
+        "Tamper": {
+            "returnStateTime": 1,
+            "returnStateValue": 0
+        }
+    },
+    "commands": [
+        {
+            "name": "Emergency",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 113,
+                "endpoint": 0,
+                "property": "sendReport",
+                "value": "notificationType:7-notificationEvent:1"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        },
+        {
+            "name": "Fire",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 113,
+                "endpoint": 0,
+                "property": "sendReport",
+                "value": "notificationType:10-notificationEvent:2"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        },
+        {
+            "name": "Ambulance",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 113,
+                "endpoint": 0,
+                "property": "sendReport",
+                "value": "notificationType:10-notificationEvent:3"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        },
+        {
+            "name": "Police",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 113,
+                "endpoint": 0,
+                "property": "sendReport",
+                "value": "notificationType:10-notificationEvent:1"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        },
+        {
+            "name": "Door chime",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 113,
+                "endpoint": 0,
+                "property": "sendReport",
+                "value": "notificationType:6-notificationEvent:22"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        },
+        {
+            "name": "Beep Beep",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 113,
+                "endpoint": 0,
+                "property": "sendReport",
+                "value": "notificationType:10-notificationEvent:4"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "LIGHT_ON"
+            }
+        }
+    ]
+}

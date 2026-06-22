@@ -1,0 +1,37 @@
+{
+    "name": "RS Room Sensor",
+    "type": "Thermostat",
+    "comlink": "3069-danfoss-sonde-d-ambiance-z-wave-danfoss-link-rs",
+    "remark": "",
+    "imglink": "danfoss.room-sensor",
+    "configuration": {
+        "battery_type": "2x1.5V AA"
+    },
+    "versions": {
+        "32771": [
+            "32769"
+        ],
+        "584": [
+            "40992"
+        ],
+        "3": [
+            "32784"
+        ]
+    },
+    "properties": {
+        "Temperature": {},
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud","Froid","Auto"
+            ],
+            "multiProperty": {
+                "Chaud": 1,
+                "Froid": 2,
+                "Auto": 10
+            }
+        },
+        "Centralscene": {"replace":{"#centralscene#":1}},
+        "Indicator": {},
+        "Batterie": {}
+    }
+}

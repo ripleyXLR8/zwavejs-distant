@@ -1,0 +1,40 @@
+{
+    "name": "DCH-Z110",
+    "type": "Ouverture",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/dlink.dchz110_-_3en1_Ouverture",
+    "comlink": "3692-d-link-capteur-de-portefenetre-z-wave-3-en-1-790069409844",
+    "remark": "",
+    "imglink": "dlink.dchz110",
+    "configuration": {
+        "battery_type": "1x3V CR123A"
+    },
+    "versions": {
+        "2": [
+            "14"
+        ]
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-7-16",
+                "value": "1"
+            },
+            {
+                "path": "132-0-wakeUpInterval",
+                "value": "86400"
+            }
+        ],
+        "needswakeup": true
+    },
+    "properties": {
+        "Opening": {
+            "type": "binary-door"
+        },
+        "Temperature": {},
+        "Luminance": {"unite":"%"},
+        "Tamper": {"type":"binary-tamper",
+            "returnStateTime": 1,
+            "returnStateValue": 0},
+        "Battery": {}
+    }
+}

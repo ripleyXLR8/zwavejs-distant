@@ -1,0 +1,22 @@
+{
+    "name": "Heavy Duty Smart Switch (DSC10)",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.zw078",
+    "versions": {
+        "3": [
+            "10"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {},
+        "Voltage": {},
+        "Current": {},
+        "Temperature": {}
+    }
+}

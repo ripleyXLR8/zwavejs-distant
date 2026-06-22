@@ -1,0 +1,16 @@
+{
+    "name": "Bulb RGBW",
+    "type": "Ampoule",
+    "comlink": "2541-zipato-ampoule-led-rgbw-z-wave-3858890731026",
+    "remark": "",
+    "imglink": "zipato.bulb",
+    "versions": {
+        "2": [
+            "2"
+        ]
+    },
+    "properties": {
+        "Multilevel":{},
+        "Color":{}
+    }
+}

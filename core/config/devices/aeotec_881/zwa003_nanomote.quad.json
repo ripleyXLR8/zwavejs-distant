@@ -1,0 +1,28 @@
+{
+    "name": "NanoMote Quad (ZWA003)",
+    "type": "Télécommande",
+    "comlink": "",
+    "remark": "",
+    "configuration": {
+        "battery_type": "Batterie"
+    },
+    "versions": {
+        "2": [
+            "3"
+        ]
+    },
+    "properties": {
+        "CentralScene": {
+            "multi": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}

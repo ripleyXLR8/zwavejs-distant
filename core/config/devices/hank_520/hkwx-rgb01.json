@@ -1,0 +1,15 @@
+{
+    "name": "Bulb",
+    "type": "Ampoule",
+    "remark": "Onglet Système, modifier Color Channels avec la valeur 31 pour avoir des rapports de couleurs cohérents",
+    "imglink": "zipato.bulb",
+    "versions": {
+        "256": [
+            "4"
+        ]
+    },
+    "properties": {
+        "Multilevel":{},
+        "Color":{}
+    }
+}

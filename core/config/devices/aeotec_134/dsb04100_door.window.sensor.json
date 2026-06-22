@@ -1,0 +1,24 @@
+{
+    "name": "Door/Window Sensor (DSB04100)",
+    "type": "Ouverture",
+    "comlink": "2340-aeon-labs-detecteur-d-ouverture-z-wave-g2-1220000011830",
+    "remark": "",
+    "imglink": "aeotec.doorwindow",
+    "configuration": {
+        "battery_type": "2x1.5V AAA"
+    },
+    "versions": {
+        "2": [
+            "4"
+        ]
+    },
+    "properties": {
+        "Opening": {
+            "type": "binary-any"
+        },
+        "Tamper": {
+            "type": "alarm"
+        },
+        "Battery": {}
+    }
+}

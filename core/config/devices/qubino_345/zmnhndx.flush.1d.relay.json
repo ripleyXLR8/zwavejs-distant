@@ -1,0 +1,19 @@
+{
+    "name": "ZMNHNDx Contact sec Z-Wave+",
+    "type": "Micromodule",
+    "comlink": "2950-qubino-micromodule-contact-sec-z-wave-zmnhnd1-3830062070072",
+    "remark": "",
+    "imglink": "qubino.zmnhndx",
+    "versions": {
+        "2": [
+            "83"
+        ]
+    },
+    "properties": {
+        "Switch": {},
+        "Power": {},
+        "Energy": {},
+        "Temperature": {},
+        "Notification":{"type":"motion","name":"Input2"}
+    }
+}

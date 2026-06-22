@@ -1,0 +1,29 @@
+{
+    "name": "SRT 323 Electronic Room Thermostat and Temperature",
+    "type": "Thermostat",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/secure.srt323_-_Thermostat",
+    "comlink": "3218-secure-thermostat-srt323-avec-ecran-lcd-et-relai-integre-5015914250569",
+    "remark": "Module vendu sous la marque Secure SRT323",
+    "imglink": "horstmann.srt323",
+    "configuration": {
+        "battery_type": "2x1.5V AAA"
+    },
+    "versions": {
+        "1": [
+            "4"
+        ]
+    },
+    "properties": {
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud"
+            ],
+            "multiProperty": {
+                "Chaud": 1
+            }
+        },
+        "Thermostatoperatingstate": {},
+        "Temperature": {},
+        "Battery": {}
+    }
+}

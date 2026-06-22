@@ -1,0 +1,30 @@
+{
+    "name": "FGRM-222 Volet roulant",
+    "type": "Volets",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/fibaro.fgrm222_-_Volets",
+    "comlink": "2604-fibaro-micromodule-pour-volet-roulant-z-wave-fgrm-222-5902020528227",
+    "remark": "Nouveau nom du module FGRM-221",
+    "imglink": "fibaro.fgrm222",
+    "firmProperties": 1,
+    "versions": {
+        "769": [
+            "4097"
+        ]
+    },
+    "properties": {
+        "default": {
+            "Shutter": {},
+            "Scene": {},
+            "Power": {"type": "multilevel"},
+            "Energy": {}
+        },
+        "<=22.22": {
+            "Shutter": {
+                "type": "inverted"
+            },
+            "Scene": {},
+            "Power": {"type": "multilevel"},
+            "Energy": {}
+        }
+    }
+}

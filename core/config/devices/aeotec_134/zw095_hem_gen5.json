@@ -1,0 +1,97 @@
+{
+    "name": "Home Energy Meter Gen5 (ZW095)",
+    "type": "Consommation",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.zw095",
+    "versions": {
+        "2": [
+            "95"
+        ],
+        "258": [
+            "95"
+        ]
+    },
+    "properties": {
+        "Power": {
+            "multi": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Power|production": {
+            "type": "production",
+            "multi": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Energy": {
+            "multi": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Voltage": {
+            "multi": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Voltage|production": {
+            "type": "production",
+            "multi": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Current": {
+            "multi": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Current|production": {
+            "type": "production",
+            "multi": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        }
+    }
+}
