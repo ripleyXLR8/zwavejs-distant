@@ -1,0 +1,156 @@
+name: Re-apply distant-mode patch to upstream
+
+# Watches the official jeedom/plugin-zwavejs repo and re-applies our tiny
+# distant-mode patch onto each new upstream version, per track (stable + beta).
+#   - clean apply  -> force-update dist/<track>, tag it, record the upstream SHA
+#   - conflict     -> open a labelled PR with the conflicted tree for manual fixup
+#
+# The user installs/pulls dist/stable (or dist/beta) as their Jeedom plugin.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'   # daily, 04:17 UTC
+  workflow_dispatch:
+    inputs:
+      track:
+        description: 'Limit to a single track (stable|beta), or leave empty for all'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  reapply:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - track: stable
+            upstream_branch: master   # upstream's release branch (no 'stable' branch exists)
+          - track: beta
+            upstream_branch: beta
+    concurrency:
+      group: reapply-${{ matrix.track }}
+      cancel-in-progress: false
+    env:
+      UPSTREAM_URL: https://github.com/jeedom/plugin-zwavejs.git
+      TRACK: ${{ matrix.track }}
+      UPSTREAM_BRANCH: ${{ matrix.upstream_branch }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Honour manual single-track filter
+        id: filter
+        run: |
+          want='${{ github.event.inputs.track }}'
+          if [ -n "$want" ] && [ "$want" != "${{ matrix.track }}" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout automation repo (main)
+        if: steps.filter.outputs.skip != 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup PHP (for php -l)
+        if: steps.filter.outputs.skip != 'true'
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Resolve upstream HEAD and decide whether work is needed
+        if: steps.filter.outputs.skip != 'true'
+        id: check
+        run: |
+          set -euo pipefail
+          remote_sha="$(git ls-remote "$UPSTREAM_URL" "refs/heads/$UPSTREAM_BRANCH" | cut -f1)"
+          if [ -z "$remote_sha" ]; then
+            echo "Upstream branch '$UPSTREAM_BRANCH' not found; nothing to do."
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          state_file=".last-applied-$TRACK.sha"
+          last="$(cat "$state_file" 2>/dev/null || echo none)"
+          echo "Upstream=$remote_sha  LastApplied=$last"
+          if [ "$remote_sha" = "$last" ]; then
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          fi
+          echo "upstream_sha=$remote_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Re-apply patch series
+        if: steps.filter.outputs.skip != 'true' && steps.check.outputs.needed == 'true'
+        id: apply
+        run: |
+          set -uo pipefail
+          REPO_DIR="$PWD" WORKDIR="$PWD/.work/$TRACK" \
+            bash scripts/reapply.sh || true   # exit code captured via env file
+          # shellcheck disable=SC1090
+          source ".reapply-$TRACK.env"
+          echo "result=$RESULT" >> "$GITHUB_OUTPUT"
+          echo "upstream_sha=$UPSTREAM_SHA" >> "$GITHUB_OUTPUT"
+          echo "failed_patches=${FAILED_PATCHES:-}" >> "$GITHUB_OUTPUT"
+
+      - name: Configure git identity for pushes
+        if: steps.filter.outputs.skip != 'true' && steps.check.outputs.needed == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      # ---- CLEAN: publish dist/<track> + tag + record state ----
+      - name: Publish (clean apply)
+        if: steps.filter.outputs.skip != 'true' && steps.check.outputs.needed == 'true' && steps.apply.outputs.result == 'clean'
+        run: |
+          set -euo pipefail
+          short="$(echo "${{ steps.apply.outputs.upstream_sha }}" | cut -c1-7)"
+          cd ".work/$TRACK"
+          git add -A
+          git commit -q -m "Enable distant mode (upstream ${short}, track $TRACK)" || echo "nothing to commit"
+          url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          git push --force "$url" "HEAD:refs/heads/dist/$TRACK"
+          git tag -f "dist-$TRACK-$short"
+          git push --force "$url" "refs/tags/dist-$TRACK-$short"
+          cd "$GITHUB_WORKSPACE"
+          echo "${{ steps.apply.outputs.upstream_sha }}" > ".last-applied-$TRACK.sha"
+          git add ".last-applied-$TRACK.sha"
+          git commit -q -m "ci: $TRACK published at upstream ${short}" || { echo "state unchanged"; exit 0; }
+          # Both matrix tracks may push state to the default branch at once; rebase+retry.
+          for i in 1 2 3 4 5; do
+            git fetch -q origin "${{ github.ref_name }}"
+            git rebase -q "origin/${{ github.ref_name }}" || git rebase --abort
+            if git push origin "HEAD:${{ github.ref_name }}"; then break; fi
+            sleep $((i * 3))
+          done
+
+      # ---- CONFLICT: push branch + open labelled PR, do NOT publish ----
+      - name: Open conflict PR
+        if: steps.filter.outputs.skip != 'true' && steps.check.outputs.needed == 'true' && steps.apply.outputs.result != 'clean'
+        run: |
+          set -euo pipefail
+          short="$(echo "${{ steps.apply.outputs.upstream_sha }}" | cut -c1-7)"
+          branch="reapply/$TRACK/${short}-${{ github.run_id }}"
+          cd ".work/$TRACK"
+          git add -A
+          git commit -q -m "WIP: distant-mode patch needs manual merge (upstream ${short})" || true
+          url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          git push --force "$url" "HEAD:refs/heads/$branch"
+          cd "$GITHUB_WORKSPACE"
+          # ensure labels exist (ignore errors if they already do)
+          gh label create "merge-conflict" --color B60205 --description "Upstream re-apply needs manual merge" 2>/dev/null || true
+          gh label create "track:$TRACK" --color 0E8A16 2>/dev/null || true
+          gh pr create \
+            --base "dist/$TRACK" \
+            --head "$branch" \
+            --title "Re-apply conflict on $TRACK (upstream ${short})" \
+            --label "merge-conflict" --label "track:$TRACK" \
+            --body "The distant-mode patch did not apply cleanly to upstream \`$UPSTREAM_BRANCH\` @ \`${short}\`.
+
+          Failed patch(es): \`${{ steps.apply.outputs.failed_patches }}\`
+
+          Resolve the conflict markers in this branch, then merge into \`dist/$TRACK\`. After merging, update \`.last-applied-$TRACK.sha\` on the default branch (or re-run the workflow once the patch is fixed) so the next run sees this upstream commit as applied." \
+            || echo "PR may already exist for $branch"
