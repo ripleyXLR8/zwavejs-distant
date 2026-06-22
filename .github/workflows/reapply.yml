@@ -129,7 +129,7 @@ jobs:
 
       # ---- CONFLICT: push branch + open labelled PR, do NOT publish ----
       - name: Open conflict PR
-        if: steps.filter.outputs.skip != 'true' && steps.check.outputs.needed == 'true' && steps.apply.outputs.result != 'clean'
+        if: steps.filter.outputs.skip != 'true' && steps.check.outputs.needed == 'true' && steps.apply.outputs.result == 'conflict'
         run: |
           set -euo pipefail
           short="$(echo "${{ steps.apply.outputs.upstream_sha }}" | cut -c1-7)"
