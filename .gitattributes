@@ -1,0 +1,6 @@
+# Keep LF in the repo regardless of the contributor's OS. The shell script and
+# the patch MUST stay LF or they break on the Linux CI runner / git apply.
+* text=auto eol=lf
+*.sh text eol=lf
+*.patch text eol=lf
+*.yml text eol=lf
