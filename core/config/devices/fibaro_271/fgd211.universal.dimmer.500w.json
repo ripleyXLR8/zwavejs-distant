@@ -1,0 +1,22 @@
+{
+    "name": "FGD-211 Dimmer",
+    "type": "Micromodule",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/fibaro.fgd211_-_Dimmer",
+    "comlink": "2965-fibaro-micromodule-variateur-z-wave-fgd-212",
+    "remark": "Ce module est remplacé dans les boutiques par le FGD-212",
+    "imglink": "fibaro.fgd211",
+    "versions": {
+        "256": [
+            "4106",
+            "265",
+            "263",
+            "12298",
+            "262",
+            "260"
+        ]
+    },
+    "properties": {
+        "Multilevel": {"type": "onlevel"},
+        "Scene": {}
+    }
+}

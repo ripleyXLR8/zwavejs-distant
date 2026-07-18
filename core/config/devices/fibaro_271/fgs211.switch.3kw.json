@@ -1,0 +1,20 @@
+{
+    "name": "FGS-211 Simple Charge",
+    "type": "Micromodule",
+    "comlink": "2862-fibaro-micromodule-commutateur-z-wave-fgs-212-5902020528272",
+    "remark": "Module remplacé par le FGS-212",
+    "imglink": "fibaro.fgs211",
+    "versions": {
+        "1024": [
+            "4106",
+            "260",
+            "263",
+            "264",
+            "262",
+            "261"
+        ]
+    },
+    "properties": {
+        "Switch": {"replace": {"#endpoint#": 1}}
+    }
+}

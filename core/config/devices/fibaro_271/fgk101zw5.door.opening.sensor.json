@@ -1,0 +1,30 @@
+{
+    "name": "FGK-101 ZW5 Door Sensor",
+    "type": "Ouverture",
+    "comlink": "3608-fibaro-detecteur-d-ouverture-z-wave-avec-entree-contact-sec-blanc-5902020528364",
+    "remark": "",
+    "imglink": "fibaro.fgk101zw5",
+    "configuration": {
+        "battery_type": "1x3.6V ER14250"
+    },
+    "versions": {
+        "1793": [
+            "4097",
+            "8193",
+            "12289"
+        ]
+    },
+    "modes": {
+        "noTemp": "Sans capteur de température",
+        "withTemp": "Avec capteur de température"
+    },
+    "properties": {
+        "Opening": {},
+        "Temperature": {
+            "mode": "withTemp"
+        },
+        "Tamper": {},
+        "Scene": {},
+        "Battery": {}
+    }
+}

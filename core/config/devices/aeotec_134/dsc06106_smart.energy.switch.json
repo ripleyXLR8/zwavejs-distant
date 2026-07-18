@@ -1,0 +1,19 @@
+{
+    "name": "Smart Energy Switch (DSC06106)",
+    "type": "Prise",
+    "comlink": "282-aeon-labs-smart-energy-switch-z-wave-1220000010369",
+    "remark": "",
+    "imglink": "aeotec.smart-energy-switch",
+    "versions": {
+        "3": [
+            "6"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {}
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "CO Sensor (HS1CA-Z)",
+    "type": "CO",
+    "comlink": "",
+    "remark": "",
+    "imglink": "heiman.hs1caz",
+    "configuration": {
+        "battery_type": "1x3V CR17335"
+    },
+    "versions": {
+        "32773": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Co":{},
+        "Battery":{}
+    }
+}

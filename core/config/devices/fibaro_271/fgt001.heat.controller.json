@@ -1,0 +1,41 @@
+{
+    "name": "FGT-001 HEAT CONTROLLER",
+    "doc": "",
+    "type": "Thermostat",
+    "imglink": "fibaro.fgt001",
+    "configuration": {
+        "conf_version": 1
+    },
+    "versions": {
+        "4865": [
+            "4096",
+            "4097"
+        ]
+    },
+    "properties": {
+        "Thermostatmode": {"replace":{"#endpoint#":1}},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off",
+                "Auto"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Auto": 1
+            },
+            "replace":{"#endpoint#":1}
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud"
+            ],
+            "multiProperty": {
+                "Chaud": 1
+            },
+            "replace":{"#endpoint#":1}
+        },
+        "Temperature": {"replace":{"#endpoint#":2}},
+        "Battery": {},
+        "Battery|capteur": {"replace":{"#endpoint#":2},"split":1}
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "ZMNHQDX Luxy Smart Light",
+    "type": "Micromodule",
+    "comlink": "",
+    "imglink": "qubino.zmnhqdx",
+    "versions": {
+        "8": [
+            "81"
+        ]
+    },
+    "properties": {
+        "Multilevel|Lumière":{"split":1},
+        "Color":{"cmdFilter":["rgb"]},
+        "Sound": {"replace":{"#listSound#":"0|Off;1|Buzzer","#stopSound#":"0"},"ignore":["Volume Etat","Volume"]},
+        "Notification":{"type":"siren"},
+        "Notificationevent|Rouge":{"split":1,"replace": {"#type#": 14,"#event#":1}},
+        "Notificationevent|Jaune":{"split":1,"replace": {"#type#": 8,"#event#":1}}
+    }
+}

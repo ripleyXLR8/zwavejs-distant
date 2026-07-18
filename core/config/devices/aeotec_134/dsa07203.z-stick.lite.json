@@ -1,0 +1,15 @@
+{
+    "name": "Z-Stick Lite (DSA07203)",
+    "type": "Contrôleur",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.dsa02203",
+    "versions": {
+        "1": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Controller": {}
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "FGBS-222 Smart Implant",
+    "type": "Micromodule",
+    "versions": {
+        "1282": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Switch": {"multi": [
+                5,
+                6
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Temperature": {"multi": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "CentralScene": {}
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "name": "Smart Dimmer 6 (ZW099)",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.zw099",
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-80",
+                "value": "3"
+            },
+            {
+                "path": "112-0-81",
+                "value": "2"
+            },
+            {
+                "path": "112-0-90",
+                "value": "1"
+            },
+            {
+                "path": "112-0-101-1",
+                "value": "1"
+            },
+            {
+                "path": "112-0-101-2",
+                "value": "1"
+            },
+            {
+                "path": "112-0-101-4",
+                "value": "1"
+            },
+            {
+                "path": "112-0-101-8",
+                "value": "1"
+            },
+            {
+                "path": "112-0-111",
+                "value": "120"
+            }
+        ],
+        "needswakeup": false
+    },
+    "versions": {
+        "259": [
+            "99"
+        ],
+        "3": [
+            "99"
+        ]
+    },
+    "properties": {
+        "Multilevel":{"replace":{"#endpoint#":1}},
+        "Power":{"replace":{"#endpoint#":1}},
+        "Energy":{"replace":{"#endpoint#":1}},
+        "Voltage":{"replace":{"#endpoint#":1}},
+        "Current":{"replace":{"#endpoint#":1}},
+        "Color":{"cmdFilter":["rgb"]}
+    }
+}

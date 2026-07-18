@@ -1,0 +1,20 @@
+{
+    "name": "Micro Smart Dimmer 2nd Edition (DSC19103)",
+    "type": "Micromodule",
+    "comlink": "287-aeon-labs-micromodule-variateur-et-compteur-d-energie-g2-1220000011120",
+    "remark": "",
+    "imglink": "aeotec.insert-dimmer",
+    "versions": {
+        "3": [
+            "19"
+        ]
+    },
+    "properties": {
+        "Multilevel": {
+            "type": "onlevel"
+        },
+        "Power": {},
+        "Energy": {},
+        "Scene": {}
+    }
+}

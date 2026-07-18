@@ -1,0 +1,72 @@
+{
+"standard": 
+	[
+		{
+			"name": "Sabotage",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 113,
+				"endpoint": "#endpoint#",
+				"property": "Home Security-Cover status",
+				"calculValueOffset": "#value#==3"
+			},
+			"subtype": "binary",
+			"display": {
+				"invertBinary": "1",
+				"generic_type": "SABOTAGE"
+			},
+			"template": {
+				"dashboard": "timeAlert",
+				"mobile": "timeAlert"
+			}
+		}
+	],
+"alarm": 
+	[
+		{
+			"name": "Sabotage",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 156,
+				"endpoint": "#endpoint#",
+				"property": "state-0"
+			},
+			"subtype": "binary",
+			"display": {
+				"invertBinary": "1",
+				"generic_type": "SABOTAGE"
+			},
+			"template": {
+				"dashboard": "timeAlert",
+				"mobile": "timeAlert"
+			}
+		}
+	],
+"binary-tamper": 
+	[
+		{
+			"name": "Sabotage",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 48,
+				"endpoint": "#endpoint#",
+				"property": "Tamper"
+			},
+			"subtype": "binary",
+			"display": {
+				"invertBinary": "1",
+				"generic_type": "SABOTAGE"
+			},
+			"template": {
+				"dashboard": "timeAlert",
+				"mobile": "timeAlert"
+			}
+		}
+	]
+}
