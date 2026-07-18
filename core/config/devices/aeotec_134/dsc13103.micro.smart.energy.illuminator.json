@@ -1,0 +1,19 @@
+{
+    "name": "Micro Smart Energy Illuminator (DSC13103)",
+    "type": "Micromodule",
+    "comlink": "287-aeon-labs-micromodule-variateur-et-compteur-d-energie-g2-1220000011120",
+    "remark": "",
+    "imglink": "aeotec.micro-smart-energy-illuminator",
+    "versions": {
+        "3": [
+            "13"
+        ]
+    },
+    "properties": {
+        "Multilevel": {
+            "type": "onlevel"
+        },
+        "Power": {},
+        "Energy": {}
+    }
+}

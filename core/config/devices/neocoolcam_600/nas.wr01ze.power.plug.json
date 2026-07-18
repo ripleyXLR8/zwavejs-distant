@@ -1,0 +1,24 @@
+{
+    "name": "Smart Power Plug NAS-WR01ZE",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "",
+    "versions": {
+        "512": [
+            "4135"
+        ],
+        "3": [
+            "4231"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {},
+        "Voltage": {},
+        "Current": {}
+    }
+}

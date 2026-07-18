@@ -1,0 +1,94 @@
+{"standard": 
+	[
+		{
+			"name": "Présence",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 1,
+			"configuration": {
+				"class": 113,
+				"endpoint": "#endpoint#",
+				"property": "Home Security-Motion sensor status",
+				"calculValueOffset": "#value#==8"
+			},
+			"subtype": "binary",
+			"display": {
+				"invertBinary": "1",
+				"generic_type": "PRESENCE"
+			},
+			"template": {
+				"dashboard": "timePresence",
+				"mobile": "timePresence"
+			}
+		}
+	],
+"binary-any": 
+	[
+		{
+			"name": "Présence",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 1,
+			"configuration": {
+				"class": 48,
+				"endpoint": "#endpoint#",
+				"property": "Any"
+			},
+			"subtype": "binary",
+			"display": {
+				"invertBinary": "1",
+				"generic_type": "PRESENCE"
+			},
+			"template": {
+				"dashboard": "timePresence",
+				"mobile": "timePresence"
+			}
+		}
+	],
+"binary-motion": 
+	[
+		{
+			"name": "Présence",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 1,
+			"configuration": {
+				"class": 48,
+				"endpoint": "#endpoint#",
+				"property": "Motion"
+			},
+			"subtype": "binary",
+			"display": {
+				"invertBinary": "1",
+				"generic_type": "PRESENCE"
+			},
+			"template": {
+				"dashboard": "timePresence",
+				"mobile": "timePresence"
+			}
+		}
+	],
+"basic-motion": 
+	[
+		{
+			"name": "Présence",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 1,
+			"configuration": {
+				"class": 32,
+				"endpoint": "#endpoint#",
+				"property": "currentValue"
+			},
+			"subtype": "binary",
+			"display": {
+				"invertBinary": "1",
+				"generic_type": "PRESENCE"
+			},
+			"template": {
+				"dashboard": "timePresence",
+				"mobile": "timePresence"
+			}
+		}
+	]
+}

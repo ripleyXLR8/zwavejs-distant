@@ -1,0 +1,55 @@
+{"standard": 
+	[
+		{
+			"name": "Pluviomètre",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 1,
+			"configuration": {
+				"class": 49,
+				"endpoint": "#endpoint#",
+				"property": "Rain rate"
+			},
+			"subtype": "numeric",
+			"unite": "mm/h"
+		}
+	],
+"global": 
+	[
+		{
+			"name": "Pluviomètre global",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 1,
+			"configuration": {
+				"class": 49,
+				"endpoint": "#endpoint#",
+				"property": "General purpose"
+			},
+			"subtype": "numeric",
+			"unite": "mm"
+		}
+	],
+"basic": 
+	[
+		{
+			"name": "Pluie",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 1,
+			"configuration": {
+				"class": 32,
+				"endpoint": "#endpoint#",
+				"property": "currentValue"
+			},
+			"subtype": "binary",
+			"display": {
+				"invertBinary": "1"
+			},
+			"template": {
+				"dashboard": "timeAlert",
+				"mobile": "timeAlert"
+			}
+		}
+	]
+}

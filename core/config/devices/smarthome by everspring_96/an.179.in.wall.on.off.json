@@ -1,0 +1,15 @@
+{
+    "name": "AN179-0 On/Off",
+    "type": "Micromodule",
+    "comlink": "2689-smarthome-europe-micromodule-mural-onoff-z-wave-plus-an179-3700946500387",
+    "remark": "",
+    "imglink": "smarthomebyeverspring.AN179-0",
+    "versions": {
+        "4": [
+            "8"
+        ]
+    },
+    "properties": {
+        "Switch": {}
+    }
+}

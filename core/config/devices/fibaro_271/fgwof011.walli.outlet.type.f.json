@@ -1,0 +1,21 @@
+{
+    "name": "FGWOF-011 Walli Outlet Type F",
+    "type": "Prise",
+    "remark": "",
+    "imglink": "fibaro.fgwof011",
+    "versions": {
+        "7937": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {},
+        "Notification|over-load":{"type":"over-load"},
+        "Notification|over-current":{"type":"over-current"},
+        "Notification|hardware":{"type":"hardware"}
+    }
+}

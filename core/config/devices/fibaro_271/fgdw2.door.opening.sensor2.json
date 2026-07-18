@@ -1,0 +1,30 @@
+{
+    "name": "FGDW-002 Door Sensor 2",
+    "type": "Ouverture",
+    "comlink": "4105-fibaro-detecteur-d-ouverture-z-wave-doorwindow-sensor-2-blanc-5902701700348",
+    "remark": "",
+    "imglink": "fibaro.fgdw2",
+    "configuration": {
+        "battery_type": "1x3.6V ER14250"
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-31",
+                "value": "1"
+            }
+        ],
+        "needswakeup": true
+    },
+    "versions": {
+        "1794": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Opening": {},
+        "Temperature": {},
+        "Tamper": {},
+        "Battery": {}
+    }
+}

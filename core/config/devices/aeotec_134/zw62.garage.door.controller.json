@@ -1,0 +1,83 @@
+{
+    "name": "Garage Door Controller Gen5 (ZW062)",
+    "type": "Porte",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/aeotec.zw062_garage_door_controller",
+    "comlink": "3403-aeon-labs-controleur-de-porte-de-garage-z-wave-gen5",
+    "remark": "",
+    "imglink": "aeotec.garagedoorcontroller",
+    "versions": {
+        "3": [
+            "62"
+        ],
+        "259": [
+            "62"
+        ]
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-80",
+                "value": "2"
+            }
+        ]
+    },
+    "properties": {
+        "Barrier": {}
+    },
+    "commands": [
+        {
+            "name": "Température",
+            "type": "info",
+            "isVisible": 1,
+            "isHistorized": 1,
+            "configuration": {
+                "calculValueOffset": "#value#/10.0",
+                "class": 112,
+                "endpoint": 0,
+                "property": "45"
+            },
+            "subtype": "numeric",
+            "display": {
+                "generic_type": "DONT"
+            },
+            "unite": "°C"
+        },
+        {
+            "name": "Actualiser Température",
+            "type": "action",
+            "isVisible": 0,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": 0,
+                "property": "45",
+                "value": "get"
+            },
+            "subtype": "other",
+            "display": {
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Sabotage",
+            "type": "info",
+            "isVisible": 1,
+            "isHistorized": 1,
+            "configuration": {
+                "calculValueOffset": "#value#==15",
+                "class": 112,
+                "endpoint": 0,
+                "property": "41"
+            },
+            "subtype": "binary",
+            "display": {
+                "invertBinary": "1",
+                "generic_type": "SABOTAGE"
+            },
+            "template": {
+                "dashboard": "alert",
+                "mobile": "alert"
+            }
+        }
+    ]
+}

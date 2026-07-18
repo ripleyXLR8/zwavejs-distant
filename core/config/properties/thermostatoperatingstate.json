@@ -1,0 +1,31 @@
+{"standard": 
+	[
+		{
+			"name": "Etat-operating",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": "0",
+			"configuration": {
+				"class": 66,
+				"endpoint": "#endpoint#",
+				"property": "state"
+			},
+			"subtype": "numeric",
+			"display": {
+				"generic_type": "THERMOSTAT_SETPOINT"
+			}
+		},
+		{
+			"name": "Etat-operating label",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": "0",
+			"configuration": {
+				"class": 66,
+				"endpoint": "#endpoint#",
+				"property": "state-label"
+			},
+			"subtype": "string"
+		}
+	]
+}

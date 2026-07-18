@@ -1,0 +1,15 @@
+{
+    "name": "ZME_UZB1 USB Stick",
+    "type": "controleur",
+    "comlink": "2669-z-waveme-mini-controleur-usb-z-wave-plus-0019962006500",
+    "remark": "",
+    "imglink": "zwaveme.uzb1",
+    "versions": {
+        "1024": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Controller": {}
+    }
+}

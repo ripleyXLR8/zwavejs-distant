@@ -1,0 +1,21 @@
+{
+    "name": "On/Off Plug-In Switch",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "dome.0087",
+    "versions": {
+        "3": [
+            "135"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {},
+        "Voltage": {},
+        "Current": {}
+    }
+}

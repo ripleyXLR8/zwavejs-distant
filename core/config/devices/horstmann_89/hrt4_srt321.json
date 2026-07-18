@@ -1,0 +1,27 @@
+{
+    "name": "HRT4-ZW Transmitter",
+    "type": "Thermostat",
+    "comlink": "1982-secure-thermostat-srt321-avec-ecran-lcd-z-wave-5015914250071",
+    "remark": "Module vendu sous la marque Secure SRT321",
+    "imglink": "horstmann.hrt4",
+    "configuration": {
+        "battery_type": "2x1.5V AAA"
+    },
+    "versions": {
+        "1": [
+            "3"
+        ]
+    },
+    "properties": {
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud"
+            ],
+            "multiProperty": {
+                "Chaud": 1
+            }
+        },
+        "Temperature": {},
+        "Battery": {}
+    }
+}

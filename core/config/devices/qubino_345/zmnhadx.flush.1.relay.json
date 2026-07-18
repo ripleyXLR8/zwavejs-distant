@@ -1,0 +1,17 @@
+{
+    "name": "ZMNHADx Simple Charge",
+    "type": "Micromodule",
+    "comlink": "3060-qubino-micromodule-commutateur-1-relai-et-consometre-z-wave-zmnhad1-3830062070102",
+    "remark": "",
+    "imglink": "qubino.zmnhadx",
+    "versions": {
+        "2": [
+            "82"
+        ]
+    },
+    "properties": {
+        "Switch": {},
+        "Power": {},
+        "Energy": {}
+    }
+}

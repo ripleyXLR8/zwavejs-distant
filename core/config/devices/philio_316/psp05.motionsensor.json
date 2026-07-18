@@ -1,0 +1,33 @@
+{
+    "name": "PSP05 B, C & D version",
+    "type": "Multicapteurs",
+    "comlink": "4108-philio-detecteur-de-mouvement-exterieur-z-wave-4713698573508",
+    "remark": "",
+    "imglink": "philio.psp05",
+    "configuration": {
+        "battery_type": "1x3V CR123A"
+    },
+    "versions": {
+        "2": [
+            "80"
+        ]
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-7-2",
+                "value": "0"
+            },
+            {
+                "path": "132-0-wakeUpInterval",
+                "value": "86400"
+            }
+        ],
+        "needswakeup": true
+    },
+    "properties": {
+        "Motion": {},
+        "Tamper": {},
+        "Battery": {}
+    }
+}

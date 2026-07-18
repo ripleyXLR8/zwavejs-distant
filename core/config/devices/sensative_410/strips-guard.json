@@ -1,0 +1,23 @@
+{
+    "name": "Strip Guard 700",
+    "ref": "",
+    "manufacturer": "Sensative",
+    "type": "Détecteur,Ouverture",
+    "reset": "Positionner l'aimant près du bord arrondi du StripGuard, puis éloigner et rapprocher le 3 fois de suite de ce même bord. À la 3ème répétition, laisser l'aimant sur le bord arrondi pendant 10 secondes. La Led s'allume quelques secondes pour indiquer la réussite de l'opération",
+    "pairing": "Positionner l'aimant près du bord arrondi du StripGuard, puis éloigner et rapprocher le 3 fois de suite de ce même bord. La Led s'allume quelques secondes pour indiquer la réussite de l'opération",
+    "remark": "",
+    "documentation": "",
+    "buylink": "",
+    "versions": {
+        "4": [
+            "4"
+        ]
+    },
+    "properties": {
+		"Opening":{},
+		"Notification|sensor":{"type":"sensor","name":"Sabotage"},
+		"Notification|magnetic":{"type":"magnetic","isVisible":0},
+		"Notification|software":{"type":"software","isVisible":0},
+		"Battery":{}
+	}
+}

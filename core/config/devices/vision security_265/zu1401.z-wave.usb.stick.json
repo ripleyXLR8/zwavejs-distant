@@ -1,0 +1,17 @@
+{
+    "name": "USB Stick ZU 1401",
+    "type": "Contrôleur",
+    "comlink": "",
+    "remark": "",
+    "imglink": "vision.zu1401",
+    "versions": {
+        "4097": [
+            "261",
+            "257",
+            "260"
+        ]
+    },
+    "properties": {
+        "Controller": {}
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "name": "Micromodule Energy Meter (PH-PAB01)",
+    "type": "Consommation",
+    "comlink": "3576-zipato-micromodule-compteur-d-energie-z-wave-3858890732689",
+    "remark": "Vendu sous la marique Zipato",
+    "imglink": "philio.phpab01",
+    "versions": {
+        "6": [
+            "26"
+        ]
+    },
+    "properties": {
+        "Power": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Energy": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Voltage": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Current": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Power factor": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        }
+    }
+}

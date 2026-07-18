@@ -1,0 +1,30 @@
+{
+    "name": "Wall Switch",
+    "type": "Interrupteur",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/nodon.wall_-_Switch_-_Interrupteur",
+    "comlink": "2995-nodon-interrupteur-mural-z-wave-plus-cozi-white-3700313920268",
+    "remark": "",
+    "imglink": "nodon.wallswitch",
+    "configuration": {
+        "battery_type": "1x3V CR2032"
+    },
+    "versions": {
+        "2": [
+            "3"
+        ]
+    },
+    "properties": {
+        "CentralScene": {
+            "multi": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}
