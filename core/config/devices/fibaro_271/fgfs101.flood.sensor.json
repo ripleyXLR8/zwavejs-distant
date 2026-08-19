@@ -1,0 +1,36 @@
+{
+    "name": "FGFS-101 Flood Sensor",
+    "type": "Fuite",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/fibaro.fgfs101_-_FloodSensors",
+    "comlink": "2365-fibaro-detecteur-d-inondation-z-wave-fgfs-101-5902020528142",
+    "remark": "",
+    "imglink": "fibaro.fgfs101",
+    "configuration": {
+        "battery_type": "1x3V CR123A"
+    },
+    "versions": {
+        "2816": [
+            "12289",
+            "40448",
+            "4097"
+        ]
+    },
+    "modes": {
+        "noTemp": "Sans capteur de température",
+        "withTemp": "Avec capteur de température"
+    },
+    "properties": {
+        "Flood": {
+            "type": "alarm"
+        },
+        "Temperature": {
+            "mode": "withTemp","replace": {"#endpoint#": 2}
+        },
+        "Tamper": {
+            "type": "alarm",
+            "returnStateTime": 1,
+            "returnStateValue": 0
+        },
+        "Battery": {}
+    }
+}

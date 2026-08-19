@@ -1,0 +1,16 @@
+{
+    "name": "SwiidInter",
+    "type": "Interrupteur",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/swiid.inter_-_Interrupteur_Cordon",
+    "comlink": "2675-swiid-interrupteur-sur-cordon-z-wave-swiidinter-blanc-370092591002",
+    "remark": "",
+    "imglink": "swiid.inter",
+    "versions": {
+        "256": [
+            "256"
+        ]
+    },
+    "properties": {
+        "Switch": {}
+    }
+}

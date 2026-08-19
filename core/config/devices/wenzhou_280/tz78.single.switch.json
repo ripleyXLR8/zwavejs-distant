@@ -1,0 +1,16 @@
+{
+    "name": "TZ78 Simple charge",
+    "type": "Micromodule",
+    "comlink": "",
+    "remark": "",
+    "imglink": "wenzhou.tz78",
+    "versions": {
+        "3": [
+            "5"
+        ]
+    },
+    "properties": {
+        "Switch": {},
+        "Scene": {}
+    }
+}

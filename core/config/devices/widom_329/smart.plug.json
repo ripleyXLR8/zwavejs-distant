@@ -1,0 +1,15 @@
+{
+    "name": "WPMS Smart Plug",
+    "type": "Prise",
+    "versions": {
+        "4628": [
+            "1792"
+        ]
+    },
+    "properties": {
+        "Switch": {},
+        "Power":{},
+        "Voltage":{},
+        "Energy":{}
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Recessed Door Sensor (DSB54)",
+    "type": "Ouverture",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.dsb54",
+    "configuration": {
+        "battery_type": "1x3V CR2"
+    },
+    "versions": {
+        "2": [
+            "54"
+        ]
+    },
+    "properties": {
+        "Opening": {
+            "type": "binary-any"
+        },
+        "Battery": {}
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "WallMote Duo (ZW129)",
+    "type": "Télécommande",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.zw129",
+    "configuration": {
+        "battery_type": "Batterie"
+    },
+    "versions": {
+        "2": [
+            "129"
+        ],
+        "258": [
+            "129"
+        ]
+    },
+    "properties": {
+        "CentralScene": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "EZMotion 3in1",
+    "type": "Multicapteurs",
+    "comlink": "",
+    "remark": "",
+    "imglink": "homeseer.ezmotion3en1",
+    "configuration": {
+        "battery_type": "3x1.5V AAA"
+    },
+    "versions": {
+        "2": [
+            "1",
+            "2"
+        ]
+    },
+    "properties": {
+        "Motion":{"type":"basic-motion","replace": {"#endpoint#": 1}},
+        "Temperature":{"replace": {"#endpoint#": 3}},
+        "Luminance":{"replace": {"#endpoint#": 2}},
+        "Battery":{}
+    }
+}

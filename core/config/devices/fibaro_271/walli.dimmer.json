@@ -1,0 +1,15 @@
+{
+    "name": "Walli Dimmer",
+    "type": "Micromodule",
+    "versions": {
+        "7169": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Multilevel": {"type": "onlevel"},
+        "Power": {},
+        "Energy": {},
+        "Scene": {}
+    }
+}

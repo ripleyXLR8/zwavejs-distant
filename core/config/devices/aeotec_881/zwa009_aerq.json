@@ -1,0 +1,21 @@
+{
+    "name": "aerQ Temperature & Humidity (ZWA009)",
+    "type": "Multicapteurs",
+    "remark": "",
+    "configuration": {
+        "battery_type": "1x3V CR2477"
+    },
+    "versions": {
+        "2": [
+            "9"
+        ]
+    },
+    "properties": {
+        "Temperature": {},
+        "Humidity": {},
+        "Dew": {},
+        "Notification|battery": {"type":"battery-maintenance"},
+        "Notification|moisture": {"type":"moisture-alarm"},
+        "Battery": {}
+    }
+}
