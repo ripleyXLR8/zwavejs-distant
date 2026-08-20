@@ -1,0 +1,33 @@
+{
+    "name": "ZRC-90",
+    "type": "Contrôleur portable",
+    "comlink": "",
+    "remark": "",
+    "imglink": "remotec.zrc90",
+    "configuration": {
+        "battery_type": "2x1.5V AAA"
+    },
+    "versions": {
+        "1": [
+            "34064"
+        ]
+    },
+    "properties": {
+        "CentralScene": {
+            "multi": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}

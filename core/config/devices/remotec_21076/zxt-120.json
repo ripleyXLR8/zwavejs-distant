@@ -1,0 +1,64 @@
+{
+    "name": "ZXT-120",
+    "type": "Thermostat",
+    "comlink": "826-remotec-zxt-120-passerelle-z-wave-vers-ir-pour-climatiseur-ac",
+    "remark": "Pose soucis sur des réseaux avec d'autres modules",
+    "imglink": "remotec.zxt120",
+    "configuration": {
+        "battery_type": "3x1.5V AAA"
+    },
+    "versions": {
+        "257": [
+            "33655"
+        ]
+    },
+    "properties": {
+        "Thermostatmode": {},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off","Chaud","Froid","Resume","Ventilateur","Dry","Auto"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Chaud": 1,
+                "Froid": 2,
+                "Resume": 5,
+                "Ventilateur": 6,
+                "Dry": 8,
+                "Auto": 10
+            }
+        },
+        "Thermostatfanmode": {},
+        "Thermostatfanmodeaction": {
+            "multi": [
+                "Auto Bas","Bas","Auto Haut","Haut","Auto Medium","Medium","Circulation","Humidity Circulation","Droite Gauche","Haut Bas","Silence","Circulation Externe"
+            ],
+            "multiValue": {
+                "Auto Bas": 0,
+                "Bas": 1,
+                "Auto Haut": 2,
+                "Haut": 3,
+                "Auto Medium": 4,
+                "Medium": 5,
+                "Circulation": 6,
+                "Humidity Circulation": 7,
+                "Droite Gauche": 8,
+                "Haut Bas": 9,
+                "Silence": 10,
+                "Circulation Externe": 11
+            }
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud","Froid","Dry","Auto"
+            ],
+            "multiProperty": {
+                "Chaud": 1,
+                "Froid": 2,
+                "Dry": 8,
+                "Auto": 10
+            }
+        },
+        "Battery":{}
+    }
+}

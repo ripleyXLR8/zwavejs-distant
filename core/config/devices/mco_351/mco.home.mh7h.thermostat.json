@@ -1,0 +1,53 @@
+{
+    "name": "Thermostat MH7H-WH/EH",
+    "type": "Thermostat",
+    "comlink": "",
+    "remark": "",
+    "imglink": "",
+    "versions": {
+        "1794": [
+            "20738"
+        ],
+        "1793": [
+            "20738"
+        ],
+        "1842": [
+            "20738"
+        ],
+        "1810": [
+            "20738"
+        ]
+    },
+    "properties": {
+        "Thermostatmode": {},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off",
+                "Heat",
+                "Energy Heat",
+                "Away"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Heat": 1,
+                "Energy Heat": 11,
+                "Away": 13
+            }
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud",
+                "Away Heating",
+                "Energy Save Heating"
+            ],
+            "multiProperty": {
+                "Chaud": 1,
+                "Away Heating" : 13,
+                "Energy Save Heating" : 11
+            }
+        },
+        "Thermostatoperatingstate": {},
+        "Temperature": {},
+        "Humidity": {}
+    }
+}

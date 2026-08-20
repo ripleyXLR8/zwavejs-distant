@@ -1,0 +1,84 @@
+{
+    "name": "Fan Coil Thermostat",
+    "ref": "HE-FT01",
+    "manufacturer": "Heltun",
+    "type": "Thermostat",
+    "reset": "Maintenir appuyé le bouton MODE pendant 6 secondes jusqu'à ce que ГEs s'affiche. Puis appuyer sur le bouton +.",
+    "pairing": "Appuyer sur le bouton CLIMATE (bouton central du bas) pendant 3 secondes, puis aller au Paramètre 2 - nEt. Appuyer ensuite sur le bouton +.",
+    "remark": "",
+    "documentation": "https://drive.google.com/file/d/1a0yey6o1lbBcZTCmXG5zaz4wr4iaToFt/view",
+    "buylink": "https://www.domadoo.fr/fr/chauffage-clim/5182-heltun-thermostat-z-wave-700-pour-ventilo-convecteur.html",
+    "versions": {
+        "4": [
+            "2"
+        ]
+    },
+    "properties": {
+        "Thermostatmode": {},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off",
+                "Heat",
+                "Cool",
+                "Auto",
+                "Fan",
+                "Auto changeover",
+                "Energy heat",
+                "Energy cool"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Heat": 1,
+                "Cool": 2,
+                "Auto": 3,
+                "Fan": 6,
+                "Auto changeover": 10,
+                "Energy heat": 11,
+                "Energy cool": 12
+            }
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud",
+                "Froid",
+                "Auto Changeover",
+                "Energy Save Heating",
+                "Energy Save Cooling"
+            ],
+            "multiProperty": {
+                "Chaud": 1,
+                "Froid" : 2,
+                "Auto Changeover" : 10,
+                "Energy Save Heating" : 11,
+                "Energy Save Cooling" : 12
+            }
+        },
+        "Thermostatfanmode": {},
+        "Thermostatfanmodeaction": {
+            "multi": [
+                "Auto Bas", "Bas","Auto Haut","Haut","Auto Medium","Medium","Circulation","Humidity Circulation","Left and right","Up and down","Quiet","External Circulation"
+            ],
+            "multiValue": {
+                "Auto Bas": 0,
+                "Bas": 1,
+                "Auto Haut": 2,
+                "Haut": 3,
+                "Auto Medium": 4,
+                "Medium": 5,
+                "Circulation": 6,
+                "Humidity Circulation": 7,
+                "Left and right": 8,
+                "Up and down": 9,
+                "Quiet": 10,
+                "External Circulation": 11
+            }
+        },
+        "Thermostatoperatingstate": {},
+        "Thermostatfanstate": {},
+        "Temperature": {},
+        "Illuminance": {},
+        "Humidity": {},
+        "Power": {},
+        "Energy": {}
+    }
+}

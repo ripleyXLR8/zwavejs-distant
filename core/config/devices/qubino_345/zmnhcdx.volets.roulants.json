@@ -1,0 +1,17 @@
+{
+    "name": "ZMNHCDx Volets",
+    "type": "Volets",
+    "comlink": "3061-qubino-micromodule-pour-volet-roulant-et-consometre-z-wave-zmnhcd1-3830062070126",
+    "remark": "",
+    "imglink": "qubino.zmnhcdx",
+    "versions": {
+        "3": [
+            "82"
+        ]
+    },
+    "properties": {
+        "Shutter": {"type":"downup"},
+        "Power": {},
+        "Energy": {}
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "AN145",
+    "type": "Douille",
+    "comlink": "829-everspring-module-douille-e27-z-wave-3700946500059",
+    "remark": "",
+    "imglink": "everspring.an145",
+    "versions": {
+        "260": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Switch": {"type":"prise"}
+    }
+}

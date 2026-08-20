@@ -1,0 +1,31 @@
+{
+    "name": "Living Connect Radiator Thermostat",
+    "type": "Thermostat",
+    "comlink": "",
+    "remark": "",
+    "imglink": "danfoss.living-connect",
+    "configuration": {
+        "battery_type": "2x1.5V AA"
+    },
+    "versions": {
+         "5": [
+            "3",
+            "4"
+        ],
+        "32773": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Temperature": {},
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud"
+            ],
+            "multiProperty": {
+                "Chaud": 1
+            }
+        },
+        "Battery":{}
+    }
+}

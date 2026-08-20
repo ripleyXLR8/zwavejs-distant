@@ -1,0 +1,19 @@
+{
+    "name": "IM20 Magnetic Contact",
+    "type": "Ouverture",
+    "comlink": "3871-kaipule-detecteur-d-ouverture-portefenetre-z-wave",
+    "remark": "",
+    "imglink": "kaipule.im20",
+    "configuration": {
+        "battery_type": "2x1.5V AAA"
+    },
+    "versions": {
+        "2": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Opening": {"type": "binary-door"},
+        "Battery": {}
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "PIR Sensor",
+    "type": "Multicapteurs",
+    "comlink": "",
+    "remark": "",
+    "imglink": "shenzen_neo.nas-pd01z",
+    "configuration": {
+        "battery_type": "1x3V CR123A"
+    },
+    "versions": {
+        "3": [
+            "131",
+            "4227"
+        ]
+    },
+    "properties": {
+        "Motion": {},
+        "Luminance": {},
+        "Tamper": {},
+        "Battery": {}
+    }
+}

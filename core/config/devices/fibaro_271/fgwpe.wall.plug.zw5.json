@@ -1,0 +1,23 @@
+{
+    "name": "FGWPE/FGWPF Wall Plug Gen5",
+    "type": "Prise",
+    "comlink": "3909-fibaro-module-prise-commutateur-et-consometre-z-wave-fibaro-wall-plug-fgwpf-102-zw5-schuko-5902020528647",
+    "remark": "",
+    "imglink": "fibaro.fgwpe101zw5",
+    "versions": {
+        "1538": [
+            "4099",
+            "4097",
+            "4100"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {
+            "type": "multilevel"
+        }
+    }
+}

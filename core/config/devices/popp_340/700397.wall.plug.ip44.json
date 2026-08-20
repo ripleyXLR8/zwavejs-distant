@@ -1,0 +1,29 @@
+{
+    "name": "700397 Wall Plug Switch Outdoor Schuko (IP44) ",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "popp.700397",
+    "versions": {
+        "3": [
+            "10"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {},
+        "Voltage": {},
+        "Current": {},
+        "CentralScene": {
+            "multi": [
+                1
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        }
+    }
+}
