@@ -1,0 +1,19 @@
+{
+    "name": "FGR-222 Volet roulant",
+    "type": "Volets",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/fibaro.fgr222_-_Volets",
+    "comlink": "3250-fibaro-micromodule-pour-volet-roulant-z-wave-fgr-222",
+    "remark": "Nouveau nom du module FGR-221",
+    "imglink": "fibaro.fgr222",
+    "versions": {
+        "770": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Shutter": {},
+        "Scene": {},
+        "Power": {"type": "multilevel"},
+        "Energy": {}
+    }
+}

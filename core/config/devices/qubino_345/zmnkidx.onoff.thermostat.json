@@ -1,0 +1,35 @@
+{
+    "name": "ZMNKIDX On/Off Thermostat",
+    "type": "Micromodule",
+    "remark": "",
+    "versions": {
+        "5": [
+            "84"
+        ]
+    },
+    "properties": {
+        "Thermostatmode": {},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off",
+                "Heat"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Heat": 1
+            }
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud"
+            ],
+            "multiProperty": {
+                "Chaud": 1
+            }
+        },
+        "Thermostatoperatingstate": {},
+        "Temperature": {},
+        "Power": {},
+        "Energy": {}
+    }
+}

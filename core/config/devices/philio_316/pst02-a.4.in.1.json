@@ -1,0 +1,49 @@
+{
+    "name": "PST02-A 4in1 Multi-Sensor",
+    "type": "Multicapteurs",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/philio.pst02a_-_4_en_1",
+    "comlink": "2608-zipato-detecteur-z-wave-4-en-1-mouvement-ouverture-luminosite-tem-3858890730425",
+    "remark": "Vendu aussi sous la marque Zipato",
+    "imglink": "philio.pst02a",
+    "configuration": {
+        "battery_type": "1x3V CR123A"
+    },
+    "versions": {
+        "2": [
+            "12"
+        ]
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-7-2",
+                "value": "1"
+            },
+            {
+                "path": "112-0-7-16",
+                "value": "1"
+            },
+            {
+                "path": "132-0-wakeUpInterval",
+                "value": "86400"
+            }
+        ],
+        "needswakeup": true
+    },
+    "properties": {
+        "Opening": {
+            "type": "binary-door"
+        },
+        "Motion": {
+            "type": "binary-motion"
+        },
+        "Temperature": {},
+        "Luminance": {"unite":"%"},
+        "Tamper": {
+            "type": "binary-tamper",
+            "returnStateTime": 1,
+            "returnStateValue": 0
+        },
+        "Battery": {}
+    }
+}

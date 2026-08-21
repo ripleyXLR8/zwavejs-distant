@@ -1,0 +1,18 @@
+{
+    "name": "Motion Sensor (HKZW-MS02)",
+    "type": "Multicapteurs",
+    "comlink": "",
+    "remark": "",
+    "configuration": {
+        "battery_type": "1x3V CR123"
+    },
+    "versions": {
+        "512": [
+            "18"
+        ]
+    },
+    "properties": {
+        "Motion": {},
+        "Battery": {}
+    }
+}

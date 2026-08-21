@@ -1,0 +1,24 @@
+{
+    "name": "Wireless Flush Mounted Switch (5443)",
+    "type": "Télécommande",
+    "comlink": "",
+    "remark": "",
+    "imglink": "duwi.5443",
+    "versions": {
+        "20482": [
+            "0"
+        ]
+    },
+    "properties": {
+        "CentralScene": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}

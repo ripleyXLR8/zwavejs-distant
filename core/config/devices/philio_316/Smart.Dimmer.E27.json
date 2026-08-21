@@ -1,0 +1,17 @@
+{
+    "name": "Smart Dimmer E27",
+    "type": "Douille",
+    "comlink": "",
+    "remark": "",
+    "imglink": "",
+    "versions": {
+        "5": [
+            "49"
+        ]
+    },
+    "properties": {
+        "Multilevel": {
+            "type": "onlevel"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{"standard": 
+	[
+		{
+			"name": "Vitesse",
+			"type": "info",
+			"isVisible": 1,
+			"isHistorized": 1,
+			"configuration": {
+				"class": 49,
+				"endpoint": "#endpoint#",
+				"property": "Velocity"
+			},
+			"subtype": "numeric",
+			"unite": "m/s"
+		}
+	]
+}

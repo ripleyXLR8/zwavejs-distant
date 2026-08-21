@@ -1,0 +1,22 @@
+{
+    "name": "Pluviomètre",
+    "type": "Pluviomètre",
+    "comlink": "4094-popp-pluviometre-z-wave-z-rain-4251295700168",
+    "remark": "",
+    "imglink": "popp.rainsensor",
+    "configuration": {
+        "battery_type": "2x 1.5V AAA"
+    },
+    "versions": {
+        "4": [
+            "17"
+        ]
+    },
+    "properties": {
+        "Rain": {},
+        "Rain|global": {"type":"global"},
+        "Rain|basic": {"type":"basic"},
+        "Waterconsumption": {},
+        "Battery": {}
+    }
+}

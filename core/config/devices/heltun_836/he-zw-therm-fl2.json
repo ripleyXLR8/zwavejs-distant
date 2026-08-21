@@ -1,0 +1,47 @@
+{
+    "name": "Heltun HEZWTHERM-FL2",
+    "type": "Chauffage",
+    "comlink": "",
+    "remark": "",
+    "versions": {
+        "3": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Thermostatmode": {},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off",
+                "Auto",
+                "Eco",
+                "Dry",
+                "Confort",
+                "Vacances"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Auto": 10,
+                "Eco": 11,
+                "Dry": 8,
+                "Confort": 15,
+                "Vacances": 13
+            }
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud"
+            ],
+            "multiProperty": {
+                "Chaud": 1
+            }
+        },
+        "Thermostatoperatingstate": {},
+        "Temperature": {},
+        "Luminance": {},
+        "Humidity": {},
+        "Soiltemperature": {},
+        "Power": {},
+        "Energy": {}
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "name": "Mini Keypad RFID",
+    "type": "Clavier RFID",
+    "comlink": "",
+    "remark": "",
+    "imglink": "",
+    "assistant": "La commande Code-0 donne le dernier code tappé sur le clavier (ou l'identifiant du badge). Pour enregistrer un code, vous pouvez utiliser les commandes ou le tableau valeurs sur la mémoire voulue (1 à 10). Pour un badge utilisez, le Code-0 pour connaître son identifiant et le reporter tel quel sur une mémoire. Il faut réveiller le module pour prise en compte. Assurez vous que la mémoire est marquée active.",
+    "configuration": {
+        "battery_type": "2x1.5V AA"
+    },
+    "versions": {
+        "24881": [
+            "17665"
+        ]
+    },
+    "properties": {
+        "Notification":{"type":"alarmLevel","repeatEventManagement":"always"},
+        "Nodenotification":{},
+        "User Code": {
+            "multi": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "replace": {
+                "#code#": "multiKey"
+            },
+            "filterVisible":{"value":1,"commands":["Code-0"]}
+        },
+        "Tamper": {"returnStateTime": 1,
+            "returnStateValue": 0},
+        "Battery":{}
+    }
+}

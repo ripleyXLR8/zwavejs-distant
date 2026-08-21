@@ -1,0 +1,48 @@
+{
+    "name": "FGRGB-101 RGBW",
+    "type": "RGBW",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/fibaro.fgrgb101_-_RGVBControler",
+    "comlink": "2367-fibaro-controleur-rgbw-z-wave-fgrgb-101-5902020528159",
+    "remark": "Peut aussi servir de capteurs multisondes",
+    "imglink": "fibaro.fgrgb101",
+    "versions": {
+        "2304": [
+            "4096",
+            "8192",
+            "16384"
+        ]
+    },
+    "modes": {
+        "color": "Couleur",
+        "multilevel": "Multilevel"
+    },
+    "properties": {
+        "Multilevel": {"mode": "multilevel",
+            "multi": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Multilevel|color": {"mode": "color",
+            "multi": [
+                0
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Color": {"mode":"color","cmdFilter":["rgb","warm"]},
+        "Color|effects": {"type":"fibaro-effects","mode":"color"},
+        "Power": {
+            "type": "multilevel"
+        },
+        "Energy": {}
+    }
+}

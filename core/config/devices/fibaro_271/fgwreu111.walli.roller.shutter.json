@@ -1,0 +1,38 @@
+{
+    "name": "Walli Volet roulant",
+    "type": "Volets",
+    "remark": "",
+    "versions": {
+        "7425": [
+            "4096"
+        ]
+    },
+    "modes": {
+        "noBso": "Sans BSO",
+        "withBso": "Avec BSO"
+    },
+    "properties": {
+        "Shutter": {
+            "type": "level",
+            "replace": {
+                "#endpoint#": 1
+            }
+        },
+        "Bso": {
+            "mode": "withBso",
+            "replace": {
+                "#endpoint#": 2
+            }
+        },
+        "CentralScene": {
+            "multi": [
+                1,2
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Power": {"replace": {"#endpoint#": 1}},
+        "Energy": {"replace": {"#endpoint#": 1}}
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "FGWPGE UK Wall Plug Gen5",
+    "type": "Prise",
+    "remark": "",
+    "imglink": "",
+    "versions": {
+        "6145": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {
+            "type": "multilevel"
+        }
+    }
+}

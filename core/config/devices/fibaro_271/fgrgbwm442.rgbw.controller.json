@@ -1,0 +1,46 @@
+{
+    "name": "RGBW-442",
+    "type": "RGBW",
+    "remark": "Peut aussi servir de capteurs multisondes",
+    "versions": {
+        "2306": [
+            "4096"
+        ]
+    },
+    "modes": {
+        "color": "Couleur",
+        "multilevel": "Multilevel"
+    },
+    "properties": {
+        "Multilevel": {"mode": "multilevel",
+            "multi": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Multilevel|color": {"mode": "color","replace": {"#endpoint#": 1}},
+        "Color": {"mode":"color","cmdFilter":["rgb","warm"],"replace": {"#endpoint#": 1}},
+        "Color|effects": {"type":"fibaro-effects2","mode":"color"},
+        "Power": {"replace": {"#endpoint#": 1}},
+        "Energy": {"replace": {"#endpoint#": 1}},
+        "CentralScene": {
+            "multi": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Notification|hardware": {"type":"hardware","replace": {"#endpoint#": 1}},
+        "Notification|over-current": {"type":"over-current","replace": {"#endpoint#": 1}}
+    }
+}

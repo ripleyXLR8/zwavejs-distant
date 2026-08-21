@@ -1,0 +1,53 @@
+{
+    "name": "Door/Window Contact MT02648",
+    "type": "Ouverture",
+    "comlink": "",
+    "remark": "",
+    "imglink": "devolo.mt02648",
+    "configuration": {
+        "battery_type": "1x3V CR123A"
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-4",
+                "value": "0"
+            },
+            {
+                "path": "112-0-5",
+                "value": "8"
+            },
+            {
+                "path": "112-0-6",
+                "value": "22"
+            },
+            {
+                "path": "112-0-7",
+                "value": "20"
+            },
+            {
+                "path": "112-0-11",
+                "value": "0"
+            },
+            {
+                "path": "132-0-wakeUpInterval",
+                "value": "14400"
+            }
+        ],
+        "needswakeup": true
+    },
+    "versions": {
+        "2": [
+            "14"
+        ]
+    },
+    "properties": {
+        "Opening": {"type": "binary-door"},
+        "Temperature":{},
+        "Luminance":{},
+        "Battery": {},
+        "Tamper": {"type": "binary-tamper",
+            "returnStateTime": 1,
+            "returnStateValue": 0}
+    }
+}

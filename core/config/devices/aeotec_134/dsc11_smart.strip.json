@@ -1,0 +1,54 @@
+{
+    "name": "Smart Strip (DSC11)",
+    "type": "Multiprise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.dsc11",
+    "versions": {
+        "3": [
+            "11"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise",
+            "multi": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Power": {
+            "multi": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Energy": {
+            "multi": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        }
+    }
+}

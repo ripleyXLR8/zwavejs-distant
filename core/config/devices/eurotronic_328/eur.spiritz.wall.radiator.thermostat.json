@@ -1,0 +1,43 @@
+{
+    "name": "Vanne Thermostatique Spiritz",
+    "type": "Thermostat",
+    "remark": "",
+    "configuration": {
+        "battery_type": "2x1.5V AA"
+    },
+    "versions": {
+        "3": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    "properties": {
+        "Temperature": {},
+        "Multilevel": {"type":"onlevel-valve"},
+        "Thermostatmode": {},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off","Chaud","Eco","Puissance Max"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Chaud": 1,
+                "Eco": 11,
+                "Puissance Max": 15
+            }
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud","Eco"
+            ],
+            "multiProperty": {
+                "Chaud": 1,
+                "Eco": 11
+            }
+        },
+        "Notification|hardware":{"type":"hardware"},
+        "Notification|battery-maintenance":{"type":"battery-maintenance"},
+        "Battery":{}
+    }
+}

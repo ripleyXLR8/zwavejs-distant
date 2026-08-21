@@ -1,0 +1,29 @@
+{
+    "name": "ZMNHJD1 Fil Pilote",
+    "type": "Micromodule",
+    "comlink": "3210-qubino-module-fil-pilote-encastrable-z-wave-zmnhjd1",
+    "remark": "",
+    "imglink": "qubino.zmnhjd1",
+    "versions": {
+        "4": [
+            "81"
+        ]
+    },
+    "properties": {
+        "PilotWire": {},
+        "Temperature": {
+            "isVisible": 0
+        },
+        "Input": {
+            "multi": [
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            },
+            "isVisible": 0
+        }
+    }
+}
