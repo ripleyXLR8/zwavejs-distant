@@ -1,0 +1,20 @@
+{
+    "name": "Powernode 1",
+    "type": "Prise",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/greenwave.Powernode1_-_Prise",
+    "comlink": "2857-greenwave-module-prise-z-wave-powernode-schuko-8886464000235",
+    "remark": "",
+    "imglink": "greenwave.Powernode1",
+    "versions": {
+        "2": [
+            "2"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {}
+    }
+}

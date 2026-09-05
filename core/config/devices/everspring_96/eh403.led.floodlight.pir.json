@@ -1,0 +1,21 @@
+{
+    "name": "EH403",
+    "type": "Mouvement, Lumière",
+    "comlink": "",
+    "remark": "",
+    "imglink": "everspring.eh403",
+    "versions": {
+        "18": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Motion": {},
+        "Luminance": {
+            "maxValue": 4000
+        }
+    }
+}

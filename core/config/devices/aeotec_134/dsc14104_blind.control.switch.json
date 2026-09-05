@@ -1,0 +1,19 @@
+{
+    "name": "Micro Motor Controller (DSC14104)",
+    "type": "Volets",
+    "comlink": "284-aeon-labs-micromodule-z-wave-pour-volet-roulant-1220000010864",
+    "remark": "",
+    "imglink": "aeotec.blind-control",
+    "versions": {
+        "3": [
+            "14"
+        ]
+    },
+    "properties": {
+        "Shutter": {
+            "type": "downup"
+        },
+        "Power": {},
+        "Energy": {}
+    }
+}

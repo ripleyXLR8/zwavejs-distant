@@ -1,0 +1,23 @@
+{
+    "name": "ZMNHDA2 Dimmer",
+    "type": "Micromodule",
+    "comlink": "",
+    "remark": "Remplacé par le ZMNHDDx Dimmer",
+    "imglink": "qubino.zmnhda2",
+    "versions": {
+        "1": [
+            "1"
+        ]
+    },
+    "modes": {
+        "multilevel": "Variateur",
+        "switch": "Switch"
+    },
+    "properties": {
+        "Multilevel": {"mode": "multilevel","type": "onoff"},
+        "Switch": {"mode": "switch"},
+        "Temperature": {},
+        "Power": {},
+        "Energy": {}
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "ZMNHZDx Weather Station Z-Wave+",
+    "type": "Weather Station",
+    "comlink": "3443-qubino-station-meteo-z-wave-zmnhzd1-3830062070560",
+    "remark": "",
+    "imglink": "qubino.zmnhzdx",
+    "versions": {
+        "7": [
+            "83"
+        ]
+    },
+    "properties": {
+        "Temperature": {"replace": {"#endpoint#": 1}},
+        "Direction": {"replace": {"#endpoint#": 2}},
+        "Velocity": {"replace": {"#endpoint#": 3}},
+        "Velocity|2": {"replace": {"#endpoint#": 4}, "name": "Vitesse 2"},
+        "Temperature|2": {"replace": {"#endpoint#": 5}, "name": "Temperature 2"},
+        "Temperature|3": {"replace": {"#endpoint#": 6}, "name": "Temperature 3"},
+        "Rain": {"replace": {"#endpoint#": 7}},
+        "Humidity": {"replace": {"#endpoint#": 8}},
+        "Temperature|4": {"replace": {"#endpoint#": 9}, "name": "Temperature 4"},
+        "Humidity|2": {"replace": {"#endpoint#": 10}, "name": "Humidité 2"},
+        "Battery": {}
+    }
+}

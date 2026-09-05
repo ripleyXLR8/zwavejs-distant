@@ -1,0 +1,20 @@
+{
+    "name": "Door/Window Sensor (HKZW-DWS01)",
+    "type": "Ouverture",
+    "comlink": "",
+    "remark": "",
+    "imglink": "hank.doorwindow",
+    "configuration": {
+        "battery_type": "2x1.5V AAA"
+    },
+    "versions": {
+        "512": [
+            "8"
+        ]
+    },
+    "properties": {
+        "Opening": {},
+        "Tamper": {},
+        "Battery": {}
+    }
+}
