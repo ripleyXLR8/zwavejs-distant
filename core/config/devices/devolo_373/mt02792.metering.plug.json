@@ -1,0 +1,22 @@
+{
+    "name": "Smart Metering Plug (MT02792)",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "devolo.mt02792",
+    "versions": {
+        "1": [
+            "18"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {},
+        "Voltage": {},
+        "Current": {},
+        "Power Factor": {}
+    }
+}

@@ -1,0 +1,21 @@
+{
+"standard": 
+	[
+		{
+			"name": "Set code",
+			"type": "action",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 99,
+				"endpoint": "#endpoint#",
+				"property": "userCode-#code#",
+				"value": "#message#"
+			},
+			"subtype": "message",
+			"display": {
+				"generic_type": "NONE"
+			}
+		}
+	]
+}

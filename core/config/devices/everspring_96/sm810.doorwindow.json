@@ -1,0 +1,19 @@
+{
+    "name": "SM810",
+    "type": "Ouverture",
+    "remark": "",
+    "configuration": {
+        "battery_type": "2x3V CR2450"
+    },
+    "versions": {
+        "2": [
+            "3"
+        ]
+    },
+    "properties": {
+        "Opening": {},
+        "Tamper": {},
+		"Notification|power-status": {"type":"power-status"},
+        "Battery": {}
+    }
+}

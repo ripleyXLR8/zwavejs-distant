@@ -1,0 +1,21 @@
+{
+    "name": "PAN03 Switch Module with meter 3 KW X1",
+    "type": "Micromodule",
+    "comlink": "2959-zipato-micromodule-commutateur-z-wave-avec-mesure-d-energie-3858890733242",
+    "remark": "Vendu aussi sous la marque Zipato",
+    "imglink": "philio.pan03",
+    "versions": {
+        "1": [
+            "15"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {},
+        "Voltage": {},
+        "Current": {}
+    }
+}

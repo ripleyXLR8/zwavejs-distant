@@ -1,0 +1,414 @@
+{
+"standard": 
+	[
+		{
+			"name": "Etat couleur",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "currentColor"
+			},
+			"subtype": "string",
+			"display": {
+				"generic_type": "LIGHT_COLOR"
+			}
+		},
+		{
+			"name": "Couleur",
+			"type": "action",
+			"isVisible": 1,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "targetColor",
+				"value": "#color#"
+			},
+			"value": "Etat couleur",
+			"subtype": "color",
+			"display": {
+				"generic_type": "LIGHT_SET_COLOR"
+			}
+		},
+		{
+			"name": "Etat Rouge",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "currentColor-2",
+				"cmdFilter" : ["rgb"]
+			},
+			"subtype": "numeric"
+		},
+		{
+			"name": "Rouge",
+			"type": "action",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "targetColor-2",
+				"value": "#slider#",
+				"minValue": 0,
+				"maxValue": 255,
+				"cmdFilter" : ["rgb"]
+			},
+			"value": "Etat Rouge",
+			"subtype": "slider"
+		},
+		{
+			"name": "Etat Vert",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "currentColor-3",
+				"cmdFilter" : ["rgb"]
+			},
+			"subtype": "numeric"
+		},
+		{
+			"name": "Vert",
+			"type": "action",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "targetColor-3",
+				"value": "#slider#",
+				"minValue": 0,
+				"maxValue": 255,
+				"cmdFilter" : ["rgb"]
+			},
+			"value": "Etat Vert",
+			"subtype": "slider"
+		},
+		{
+			"name": "Etat Bleu",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "currentColor-4",
+				"cmdFilter" : ["rgb"]
+			},
+			"subtype": "numeric"
+		},
+		{
+			"name": "Bleu",
+			"type": "action",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "targetColor-4",
+				"value": "#slider#",
+				"minValue": 0,
+				"maxValue": 255,
+				"cmdFilter" : ["rgb"]
+			},
+			"value": "Etat Bleu",
+			"subtype": "slider"
+		},
+		{
+			"name": "Etat couleur RGB",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "hexColor",
+				"cmdFilter" : ["rgb"]
+			},
+			"subtype": "string",
+			"display": {
+				"generic_type": "LIGHT_COLOR"
+			}
+		},
+		{
+			"name": "Couleur RGB",
+			"type": "action",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "hexColor",
+				"value": "#color#",
+				"cmdFilter" : ["rgb"]
+			},
+			"value": "Etat couleur RGB",
+			"subtype": "color",
+			"display": {
+				"generic_type": "LIGHT_SET_COLOR"
+			}
+		},
+		{
+			"name": "Etat Blanc Chaud",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "currentColor-0",
+				"cmdFilter" : ["warm"]
+			},
+			"subtype": "numeric"
+		},
+		{
+			"name": "Blanc Chaud",
+			"type": "action",
+			"isVisible": 1,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "targetColor-0",
+				"value": "#slider#",
+				"minValue": 0,
+				"maxValue": 255,
+				"cmdFilter" : ["warm"]
+			},
+			"value": "Etat Blanc Chaud",
+			"subtype": "slider"
+		},
+		{
+			"name": "Etat Blanc Froid",
+			"type": "info",
+			"isVisible": 0,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "currentColor-1",
+				"cmdFilter" : ["cold"]
+			},
+			"subtype": "numeric"
+		},
+		{
+			"name": "Blanc Froid",
+			"type": "action",
+			"isVisible": 1,
+			"isHistorized": 0,
+			"configuration": {
+				"class": 51,
+				"endpoint": "#endpoint#",
+				"property": "targetColor-1",
+				"value": "#slider#",
+				"minValue": 0,
+				"maxValue": 255,
+				"cmdFilter" : ["cold"]
+			},
+			"value": "Etat Blanc Froid",
+			"subtype": "slider"
+		}
+	],
+"fibaro-effects":
+	[
+		{
+            "name": "Cheminée",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 72,
+                "value": "set-6"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon jeedom-feu\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Orage",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 72,
+                "value": "set-7"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon meteo-orage\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Aube",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 72,
+                "value": "set-8"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon meteo-soleil\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Fading",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 72,
+                "value": "set-9"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon divers-triangular42\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "RBB",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 72,
+                "value": "set-10"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon jeedom-alerte\"></i>",
+                "generic_type": "DONT"
+            }
+        }
+	],
+"fibaro-effects2":
+	[
+		{
+            "name": "Cheminée",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 157,
+                "value": "set-6"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon jeedom-feu\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Orage",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 157,
+                "value": "set-7"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon meteo-orage\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Aurora",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 157,
+                "value": "set-8"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon meteo-soleil\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Arc-En-Ciel",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 157,
+                "value": "set-9"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon divers-triangular42\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Police",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint": "#endpoint#",
+                "property": 157,
+                "value": "set-10"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"icon jeedom-alerte\"></i>",
+                "generic_type": "DONT"
+            }
+        },
+        {
+            "name": "Stop effet",
+            "type": "action",
+            "isVisible": 1,
+            "isHistorized": 0,
+            "configuration": {
+                "class": 112,
+                "endpoint":" #endpoint#",
+                "property": 157,
+                "value": "set-5"
+            },
+            "subtype": "other",
+            "display": {
+                "icon": "<i class=\"fas fa-stop\"></i>",
+                "generic_type": "DONT"
+            }
+        }
+	]
+}

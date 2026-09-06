@@ -1,0 +1,21 @@
+{
+    "name": "ZP3102",
+    "type": "Multicapteurs",
+    "comlink": "2605-zipato-detecteur-de-mouvement-et-capteur-de-temperature-z-wave-3858890730272",
+    "remark": "",
+    "imglink": "vision.zp3102",
+    "configuration": {
+        "battery_type": "1x3V CR123A"
+    },
+    "versions": {
+        "8194": [
+            "517"
+        ]
+    },
+    "properties": {
+        "Motion": {},
+        "Temperature": {},
+        "Tamper": {},
+        "Battery": {}
+    }
+}

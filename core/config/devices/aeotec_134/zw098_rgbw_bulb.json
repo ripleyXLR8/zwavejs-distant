@@ -1,0 +1,19 @@
+{
+    "name": "LED Bulb (ZW098)",
+    "type": "Ampoule",
+    "comlink": "2922-aeon-labs-ampoule-led-z-wave-plus-1220000012974",
+    "remark": "",
+    "imglink": "aeotec.led-bulb",
+    "versions": {
+        "259": [
+            "98"
+        ],
+        "3": [
+            "98"
+        ]
+    },
+    "properties": {
+        "Multilevel":{},
+        "Color":{}
+    }
+}

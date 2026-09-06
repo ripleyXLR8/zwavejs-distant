@@ -1,0 +1,21 @@
+{
+    "name": "Smart Plug (HKZW-SO01)",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "hank.smartplug001",
+    "versions": {
+        "257": [
+            "5"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {},
+        "Voltage": {},
+        "Current": {}
+    }
+}

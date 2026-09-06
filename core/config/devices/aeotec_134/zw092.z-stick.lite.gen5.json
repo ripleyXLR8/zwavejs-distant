@@ -1,0 +1,15 @@
+{
+    "name": "Z-Stick Lite Gen5 (ZW092)",
+    "type": "Contrôleur",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.zw092",
+    "versions": {
+        "1": [
+            "92"
+        ]
+    },
+    "properties": {
+        "Controller": {}
+    }
+}

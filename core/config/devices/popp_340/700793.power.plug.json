@@ -1,0 +1,19 @@
+{
+    "name": "700793 Smart Plug",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "popp.700793",
+    "versions": {
+        "3": [
+            "4098"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {}
+    }
+}

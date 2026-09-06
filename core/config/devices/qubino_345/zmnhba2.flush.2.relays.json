@@ -1,0 +1,40 @@
+{
+    "name": "ZMNHBA2 Double Charge",
+    "type": "Micromodule",
+    "comlink": "3062-qubino-micromodule-commutateur-2-relais-et-consometre-z-wave-zmnhbd1-3830062070119.html",
+    "remark": "Problème connue de remonté d'état, Switch1 et Puissance. Remplacé par ZMNHBD1",
+    "imglink": "qubino.zmnhba2",
+    "versions": {
+        "2": [
+            "1"
+        ]
+    },
+    "modes": {
+        "noTemp": "Sans capteur de température",
+        "withTemp": "Avec capteur de température"
+    },
+    "properties": {
+        "Switch": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            }
+        },
+        "Temperature": {
+            "mode": "withTemp"
+        },
+        "Power": {"multi": [
+                0,
+                1,
+                2
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Energy": {"multi": [
+                0,
+                1,
+                2
+            ],"replace": {"#endpoint#": "multiKey"}}
+    }
+}
