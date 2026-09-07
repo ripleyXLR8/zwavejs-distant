@@ -1,0 +1,61 @@
+<?php
+/* This file is part of Plugin openzwave for jeedom.
+*
+* Plugin openzwave for jeedom is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* Plugin openzwave for jeedom is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with Plugin openzwave for jeedom. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+if (!isConnect('admin')) {
+	throw new Exception('401 - {{Accès non autorisé}}');
+}
+?>
+<div id="div_networkStatAlert" style="display: none;"></div>
+<div class="modalStatsValues">
+	<table class="table table-condensed table-bordered tablesorter tablesorter-bootstrap table-striped hasFilters tableStat" id="table_Stat">
+		<thead>
+			<tr>
+				<th>{{Id}}</th>
+				<th>{{Equipement}}</th>
+				<th>{{RX}}</th>
+				<th>{{TX}}</th>
+				<th>{{Timeout}}</th>
+				<th>{{RTT}}</th>
+				<th>{{Dernière route}}</th>
+				<th>{{Dernière vitesse}}</th>
+				<th>{{Dernier rssi}}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+			$eqLogics = eqLogic::byType('zwavejs');
+			foreach ($eqLogics as $eqLogic) {
+				$nameTd = '<td><img src="' . $eqLogic->getImage() . '" height="40"/> <a href="index.php?v=d&p=zwavejs&m=zwavejs&id=' . $eqLogic->getId() . '">' . $eqLogic->getHumanName(true) . '</a></td>';
+				$nodeId = $eqLogic->getLogicalId();
+				echo '<tr>';
+				echo '<td><span class="label label-primary">' . $nodeId . '</span></td>';
+				echo $nameTd;
+				echo '<td><span class="label label-info rx' . $nodeId . '" style="font-size : 1em;">0</span></td>';
+				echo '<td><span class="label label-info tx' . $nodeId . '" style="font-size : 1em;">0</span></td>';
+				echo '<td><span class="label label-info timeout' . $nodeId . ' style="font-size : 1em;">0</span></td>';
+				echo '<td><span class="label label-info rtt' . $nodeId . ' style="font-size : 1em;">0</span></td>';
+				echo '<td><span class="label label-info lwr' . $nodeId . ' style="font-size : 1em;">N/A</span></td>';
+				echo '<td><span class="label label-info lwr-speed' . $nodeId . ' style="font-size : 1em;">N/A</span></td>';
+				echo '<td><span class="label label-info lwr-rssi' . $nodeId . ' style="font-size : 1em;">N/A</span></td>';
+				echo '</tr>';
+			}
+			?>
+		</tbody>
+	</table>
+</div>
+<?php include_file('core', 'zwavejs', 'class.js', 'zwavejs');
+include_file('desktop', 'stats', 'js', 'zwavejs'); ?>

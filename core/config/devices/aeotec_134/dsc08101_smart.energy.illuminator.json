@@ -1,0 +1,19 @@
+{
+    "name": "Smart Energy Illuminator (DSC08101)",
+    "type": "Prise",
+    "comlink": "283-aeon-labs-smart-energy-illuminator-z-wave-1220000010499",
+    "remark": "",
+    "imglink": "aeotec.smart-energy-illuminator",
+    "versions": {
+        "3": [
+            "8"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Power": {},
+        "Energy": {}
+    }
+}
