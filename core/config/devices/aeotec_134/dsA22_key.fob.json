@@ -1,0 +1,20 @@
+{
+    "name": "Key Fob (DSA22)",
+    "type": "Télécommande",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/aeotec.keyfob_-_Telecommande",
+    "comlink": "2677-aeon-labs-telecommande-porte-cles-z-wave-plus-4-boutons-gen5",
+    "remark": "Remplacé dans les boutiques par le keyfob Gen5",
+    "imglink": "aeotec.keyfob",
+    "configuration": {
+        "battery_type": "1x3V CR2450"
+    },
+    "versions": {
+        "1": [
+            "22"
+        ]
+    },
+    "properties": {
+        "Scene": {},
+        "Battery": {}
+    }
+}

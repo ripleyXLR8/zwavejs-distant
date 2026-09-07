@@ -1,0 +1,15 @@
+{
+    "name": "AN157-6",
+    "type": "Prise",
+    "comlink": "831-everspring-module-prise-on-off-z-wave-an157-6-french-3700946500080",
+    "remark": "",
+    "imglink": "everspring.an157-6",
+    "versions": {
+        "4": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Switch": {"type":"prise"}
+    }
+}

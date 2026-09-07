@@ -1,0 +1,19 @@
+{
+    "name": "Panic Watch",
+    "type": "Télécommande",
+    "comlink": "2350-benext-bracelet-bouton-d-urgence-z-wave-0632181493748",
+    "remark": "",
+    "imglink": "benext.panicwatch",
+    "configuration": {
+        "battery_type": "1x3V CR2032"
+    },
+    "versions": {
+        "21": [
+            "257"
+        ]
+    },
+    "properties": {
+        "Switch": {"type":"alert"},
+        "Battery":{}
+    }
+}

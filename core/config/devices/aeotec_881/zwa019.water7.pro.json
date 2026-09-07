@@ -1,0 +1,22 @@
+{
+    "name": "Water Sensor 7 Pro (ZWA019)",
+    "type": "Fuite",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.zwa019",
+    "configuration": {
+        "battery_type": "1x3V ER14250"
+    },
+    "versions": {
+        "2": [
+            "19"
+        ]
+    },
+    "properties": {
+        "Flood": {},
+        "Temperature": {},
+        "Humidity": {},
+        "Tamper": {},
+        "Battery": {}
+    }
+}

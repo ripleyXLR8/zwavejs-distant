@@ -1,0 +1,29 @@
+{
+    "name": "Door/Window Sensor 7 (ZWA011)",
+    "type": "Ouverture",
+    "comlink": "",
+    "remark": "",
+    "imglink": "aeotec.zwa011",
+    "configuration": {
+        "battery_type": "1x3V ER14250"
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "132-0-wakeUpInterval",
+                "value": "14400"
+            }
+        ],
+        "needswakeup": true
+    },
+    "versions": {
+        "2": [
+            "11"
+        ]
+    },
+    "properties": {
+        "Opening": {"type":"notification-simple"},
+        "Tamper": {},
+        "Battery": {}
+    }
+}

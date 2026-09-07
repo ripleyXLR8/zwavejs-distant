@@ -1,0 +1,29 @@
+{
+    "name": "ZMNHJA2 Fil Pilote",
+    "type": "Micromodule",
+    "comlink": "2654-qubino-module-fil-pilote-encastrable-z-wave-zmnhja2",
+    "remark": "",
+    "imglink": "qubino.zmnhja2",
+    "versions": {
+        "4": [
+            "1"
+        ]
+    },
+    "properties": {
+        "PilotWire": {},
+        "Temperature": {
+            "isVisible": 0
+        },
+        "Input": {
+            "multi": [
+                1,
+                2,
+                3
+            ],
+            "replace": {
+                "#endpoint#": "multiKey"
+            },
+            "isVisible": 0
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "name": "Thermostat MH8-FC-EU",
+    "type": "Thermostat",
+    "comlink": "3735-mcohome-thermostat-pour-ventilo-convecteur-a-2-tubes-z-wave-mh8-fc-4251295700212",
+    "remark": "",
+    "imglink": "mco.home.mh8-fc",
+    "versions": {
+        "2049": [
+            "12546",
+            "20738"
+        ],
+        "2051": [
+            "20738"
+        ],
+        "2050": [
+            "20738"
+        ]
+    },
+    "properties": {
+        "Thermostatmode": {},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off",
+                "Heat",
+                "Cool",
+                "Fan"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Heat": 1,
+                "Cool": 2,
+                "Fan": 6
+            }
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud",
+                "Froid"
+            ],
+            "multiProperty": {
+                "Chaud": 1,
+                "Froid" : 2
+            }
+        },
+        "Thermostatfanmode": {},
+        "Thermostatfanmodeaction": {
+            "multi": [
+                "Bas","Haut","Medium"
+            ],
+            "multiValue": {
+                "Bas": 1,
+                "Haut": 3,
+                "Medium": 5
+            }
+        },
+        "Thermostatoperatingstate": {},
+        "Thermostatfanstate": {},
+        "Temperature": {}
+    }
+}

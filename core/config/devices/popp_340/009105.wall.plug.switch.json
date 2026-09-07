@@ -1,0 +1,17 @@
+{
+    "name": "009105 Wall Plug Switch Schuko (IP44)",
+    "type": "Prise",
+    "comlink": "3070-popp-z-wave-plugin-switch-ip44-outdoor-use",
+    "remark": "",
+    "imglink": "popp.009105",
+    "versions": {
+        "3": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        }
+    }
+}

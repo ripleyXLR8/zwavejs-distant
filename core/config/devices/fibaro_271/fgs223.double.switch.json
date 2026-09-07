@@ -1,0 +1,35 @@
+{
+    "name": "FGS-223 Double charge",
+    "type": "Micromodule",
+    "comlink": "3728-fibaro-micromodule-commutateur-double-z-wave-fgs-223-5902020528661",
+    "remark": "Le rafraîchissement manuel est requis sur l'instance 1 (Switch S2) pour la remonté de puissance et l'état du S2. Les notification de scènes ne sont pas remontées, elles requièrent le support de la CC Central Scene.",
+    "imglink": "fibaro.fgs223",
+    "versions": {
+        "515": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Switch": {"multi": [
+                1,
+                2
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Power": {"multi": [
+                1,
+                2
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Energy": {"multi": [
+                1,
+                2
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "CentralScene": {
+            "multi": [
+                1,
+                2
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "LSM-15",
+    "type": "Micromodule",
+    "comlink": "",
+    "remark": "",
+    "versions": {
+        "21079": [
+            "13619"
+        ]
+    },
+    "properties": {
+        "Multilevel": {},
+        "CentralScene": {
+            "multi": [
+                1
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        }
+    }
+}

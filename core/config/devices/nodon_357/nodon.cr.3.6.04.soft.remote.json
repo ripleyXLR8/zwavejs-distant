@@ -1,0 +1,30 @@
+{
+    "name": "Soft Remote",
+    "type": "Télécommande",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/nodon.Soft_-_Remote_-_Telecommande",
+    "comlink": "2979-nodon-soft-remote-z-wave-plus-wasabi-3700313920336",
+    "remark": "",
+    "imglink": "nodon.softremote",
+    "configuration": {
+        "battery_type": "1x3V CR2032"
+    },
+    "versions": {
+        "2": [
+            "2"
+        ]
+    },
+    "properties": {
+        "CentralScene": {
+            "multi": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}
