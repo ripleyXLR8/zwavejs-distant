@@ -1,0 +1,68 @@
+{
+    "name": "ZMNHXDx 3 PhaseSmart meter",
+    "type": "Rail-din",
+    "comlink": "",
+    "remark": "Le module doit être inclus en mode sécurisé pour pouvoir contrôler les relais additionnels",
+    "imglink": "",
+    "versions": {
+        "7": [
+            "84"
+        ]
+    },
+    "properties": {
+        "Power": {"multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Energy": {"multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Current": {"multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Voltage": {"multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Power factor": {"multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Power|prod": {"type":"production","multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Current|prod": {"type":"production","multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Voltage|prod": {"type":"production","multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}},
+        "Power factor|prod": {"type":"production","multi": [
+                1,
+                2,
+                3,
+                4
+            ],"replace": {"#endpoint#": "multiKey"}}
+    }
+}

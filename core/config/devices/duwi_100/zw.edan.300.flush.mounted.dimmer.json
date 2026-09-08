@@ -1,0 +1,18 @@
+{
+    "name": "ZW EDAN 300 Dimmer",
+    "type": "Interrupteur",
+    "comlink": "749-duwi-interrupteur-variateur-everlux-z-wave-4008297054337",
+    "remark": "Il faut activer le polling pour avoir une remonté d'état",
+    "imglink": "duwi.edan-300",
+    "versions": {
+        "1": [
+            "0"
+        ]
+    },
+    "configuration" :{
+        "polling":{"0-38-currentValue":"1"}
+    },
+    "properties": {
+        "Multilevel": {"type":"onlevel"}
+    }
+}

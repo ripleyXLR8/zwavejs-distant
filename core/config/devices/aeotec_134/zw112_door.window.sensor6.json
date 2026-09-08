@@ -1,0 +1,22 @@
+{
+    "name": "Door/Window Sensor 6 (ZW112)",
+    "type": "Ouverture",
+    "comlink": "3579-aeon-labs-capteur-pour-porte-et-fenetre-z-wave-dw-sensor-6-1220000013162",
+    "remark": "",
+    "imglink": "aeotec.doorwindow6",
+    "configuration": {
+        "battery_type": "Batterie"
+    },
+    "versions": {
+        "258": [
+            "112"
+        ],
+        "2": [
+            "112"
+        ]
+    },
+    "properties": {
+        "Opening": {},
+        "Battery": {}
+    }
+}

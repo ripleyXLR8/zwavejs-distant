@@ -1,0 +1,23 @@
+{
+    "name": "FGS-214 Simple Charge",
+    "type": "Micromodule",
+    "comlink": "",
+    "remark": "Remplace le FGS-212",
+    "imglink": "fibaro.fgs214",
+    "versions": {
+        "1028": [
+            "4096"
+        ]
+    },
+    "properties": {
+        "Switch": {},
+        "CentralScene": {
+            "multi": [
+                1,2
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        }
+    }
+}

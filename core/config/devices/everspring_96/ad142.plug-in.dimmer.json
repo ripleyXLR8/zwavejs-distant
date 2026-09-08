@@ -1,0 +1,19 @@
+{
+    "name": "AD142-6",
+    "type": "Prise",
+    "comlink": "825-everspring-module-lampe-z-wave-french-3700946500035",
+    "remark": "",
+    "imglink": "everspring.ad142-6",
+    "versions": {
+        "3": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Multilevel": {
+            "type": "onlevel"
+        },
+        "Power": {},
+        "Energy": {}
+    }
+}
