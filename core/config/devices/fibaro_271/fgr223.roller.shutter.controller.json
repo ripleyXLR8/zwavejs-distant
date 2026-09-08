@@ -1,0 +1,51 @@
+{
+    "name": "FGR-223 Volet roulant",
+    "type": "Volets",
+    "remark": "Nouveau nom du module FGR-222",
+    "imglink": "fibaro.fgr222",
+    "versions": {
+        "771": [
+            "4096"
+        ]
+    },
+    "configuration" :{
+        "refreshes":[{"refresh::source":"38-1-targetValue","refresh::target":"38-1-currentValue","refresh::sleep":"5","refresh::number":"9","refresh::comment":"Le module ne reporte pas son changement de position correctement lors d'une action Z-Wave"},
+                     {"refresh::source":"38-1-Up-true","refresh::target":"38-1-currentValue","refresh::sleep":"5","refresh::number":"9","refresh::comment":"Le module ne reporte pas son changement de position correctement lors d'une action Z-Wave"},
+                     {"refresh::source":"38-1-Down-true","refresh::target":"38-1-currentValue","refresh::sleep":"5","refresh::number":"9","refresh::comment":"Le module ne reporte pas son changement de position correctement lors d'une action Z-Wave"}
+        ]
+    },
+    "modes": {
+        "noBso": "Sans BSO",
+        "withBso": "Avec BSO"
+    },
+    "properties": {
+        "Shutter": {
+            "type": "downup",
+            "replace": {
+                "#endpoint#": 1
+            }
+        },
+        "Bso": {
+            "mode": "withBso",
+            "replace": {
+                "#endpoint#": 2
+            }
+        },
+        "CentralScene": {
+            "multi": [
+                1,2
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Power": {"replace": {
+                "#endpoint#": 1
+            }},
+        "Energy": {"replace": {
+                "#endpoint#": 1
+            }},
+        "Notification|hardware": {"type":"hardware","replace": {"#endpoint#": 1}},
+        "Notification|over-current": {"type":"over-current","replace": {"#endpoint#": 1}}
+    }
+}

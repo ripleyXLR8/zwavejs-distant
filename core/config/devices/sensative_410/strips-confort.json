@@ -1,0 +1,19 @@
+{
+    "name": "Strips Confort",
+    "type": "Multicapteur",
+    "comlink": "",
+    "remark": "",
+    "imglink": "",
+    "versions": {
+        "3": [
+            "10"
+        ]
+    },
+    "properties": {
+        "Temperature":{},
+        "Humiditty":{},
+        "Luminance":{},
+        "Flood":{},
+        "Battery":{}
+    }
+}

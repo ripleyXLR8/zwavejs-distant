@@ -1,0 +1,15 @@
+{
+    "name": "Smart LED Retrofit Kit ZE27EU",
+    "type": "Interrupteur",
+    "comlink": "3226-domitech-ampoule-led-dimmable-z-wave-zbulb-869166000060",
+    "remark": "",
+    "imglink": "domitech.ze27eu",
+    "versions": {
+        "19522": [
+            "12596"
+        ]
+    },
+    "properties": {
+        "Multilevel": {"type": "onlevel"}
+    }
+}

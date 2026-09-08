@@ -1,0 +1,42 @@
+{
+    "name": "MultiSensor 6 (ZW100)",
+    "type": "Multicapteurs",
+    "comlink": "2921-aeon-labs-detecteur-multifonctions-6-en-1-multisensor-z-wave-plus-gen5-1220000013100",
+    "remark": "",
+    "imglink": "aeotec.multisensor6",
+    "configuration": {
+        "battery_type": "2x3V CR123A"
+    },
+    "versions": {
+        "258": [
+            "100"
+        ],
+        "2": [
+            "100"
+        ]
+    },
+    "recommended": {
+        "params": [
+            {
+                "path": "112-0-4",
+                "comment": "PIR sensitivity",
+                "value": "3"
+            }
+        ],
+        "needswakeup": true
+    },
+    "properties": {
+        "Motion": {},
+        "Temperature": {},
+        "Humidity": {},
+        "Luminance": {
+            "maxValue": 4000
+        },
+        "Ultraviolet": {},
+        "Tamper": {
+            "returnStateTime": 1,
+            "returnStateValue": 0
+        },
+        "Battery": {}
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "name": "ZMNHLAx PWM Thermostat",
+    "type": "Micromodule",
+    "comlink": "2941-qubino-micromodule-thermostat-pwm-encastrable-z-wave-zmnhla2-3830062070065",
+    "remark": "",
+    "imglink": "qubino.zmnhlax",
+    "versions": {
+        "5": [
+            "3"
+        ]
+    },
+    "properties": {
+        "Temperature": {},
+        "Power": {},
+        "Energy": {},
+        "Multilevel": {},
+        "Thermostatmode": {},
+        "Thermostatmodeaction": {
+            "multi": [
+                "Off","Auto"
+            ],
+            "multiValue": {
+                "Off": 0,
+                "Auto": 3
+            }
+        },
+        "Thermostatsetpoint": {
+            "multi": [
+                "Chaud"
+            ],
+            "multiProperty": {
+                "Chaud": 1
+            }
+        }
+    }
+}

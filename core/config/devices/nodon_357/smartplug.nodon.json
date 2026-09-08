@@ -1,0 +1,20 @@
+{
+    "name": "Smartplug",
+    "type": "Prise",
+    "documentation": "https://doc.jeedom.com/#language#/zwave/nodon.smartplug_-_Prise",
+    "comlink": "2892-nodon-prise-intelligente-z-wave-type-schuko-3700313920206",
+    "remark": "",
+    "imglink": "nodon.smartplug",
+    "versions": {
+        "1": [
+            "1"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Notification": {"type":"mains"},
+        "Notification|Hardware": {"type":"hardware"}
+    }
+}

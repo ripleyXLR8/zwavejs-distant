@@ -1,0 +1,15 @@
+{
+    "name": "SwiidPlug",
+    "type": "Prise",
+    "comlink": "2737-swiid-prise-gigogne-z-wave-plus-swiidplug-format-francais-370092591101",
+    "remark": "",
+    "imglink": "swiid.plug",
+    "versions": {
+        "8199": [
+            "1798"
+        ]
+    },
+    "properties": {
+        "Switch": {"type":"prise"}
+    }
+}

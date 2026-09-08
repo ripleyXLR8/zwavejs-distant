@@ -1,0 +1,28 @@
+{
+    "name": "Wall Controller SR-ZV90014",
+    "type": "Télécommande",
+    "comlink": "",
+    "remark": "",
+    "configuration": {
+        "battery_type": "1xCR2450 3V"
+    },
+    "versions": {
+        "768": [
+            "41744"
+        ]
+    },
+    "properties": {
+        "CentralScene": {
+            "multi": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "replace": {
+                "#centralscene#": "multiKey"
+            }
+        },
+        "Battery": {}
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Metering Plug (MT02646)",
+    "type": "Prise",
+    "comlink": "",
+    "remark": "",
+    "imglink": "devolo.mt02646",
+    "versions": {
+        "1": [
+            "17"
+        ]
+    },
+    "properties": {
+        "Switch": {
+            "type": "prise"
+        },
+        "Energy": {},
+        "Power": {},
+        "Voltage": {},
+        "Current": {},
+        "Power Factor": {}
+    }
+}
